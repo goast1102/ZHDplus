@@ -1,0 +1,1040 @@
+{
+  "events": [
+    {
+      "id": "milton",
+      "display_name": "Milton",
+      "region_name": "Florida",
+      "station": {
+        "id": "72210",
+        "latitude": 27.7,
+        "longitude": -82.4
+      },
+      "era5": {
+        "data_dir": "data/era5_milton",
+        "area": [
+          28.25,
+          -82.75,
+          27.25,
+          -81.75
+        ],
+        "start_date": "2024-10-08",
+        "end_date": "2024-10-12"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72210_Milton",
+        "start_time": "2024-10-08 00:00:00",
+        "end_time": "2024-10-12 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2024-10-08 00:00:00",
+        "pre_end": "2024-10-09 12:00:00",
+        "impact_end": "2024-10-10 12:00:00",
+        "time_end": "2024-10-12 00:00:00"
+      },
+      "enabled": false
+    },
+    {
+      "id": "helene",
+      "display_name": "Helene",
+      "region_name": "Florida Big Bend",
+      "station": {
+        "id": "72214",
+        "latitude": 30.39,
+        "longitude": -84.35
+      },
+      "era5": {
+        "data_dir": "data/era5_helene",
+        "area": [
+          31.0,
+          -84.75,
+          30.0,
+          -83.75
+        ],
+        "start_date": "2024-09-25",
+        "end_date": "2024-09-29"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72214_Helene",
+        "start_time": "2024-09-25 00:00:00",
+        "end_time": "2024-09-29 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2024-09-25 00:00:00",
+        "pre_end": "2024-09-26 12:00:00",
+        "impact_end": "2024-09-27 12:00:00",
+        "time_end": "2024-09-29 00:00:00"
+      },
+      "enabled": false
+    },
+    {
+      "id": "beryl",
+      "display_name": "Beryl",
+      "region_name": "Texas Coast",
+      "station": {
+        "id": "72251",
+        "latitude": 27.77,
+        "longitude": -97.5
+      },
+      "era5": {
+        "data_dir": "data/era5_beryl",
+        "area": [
+          28.25,
+          -98.0,
+          27.25,
+          -97.0
+        ],
+        "start_date": "2024-07-06",
+        "end_date": "2024-07-10"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72251_Beryl",
+        "start_time": "2024-07-06 00:00:00",
+        "end_time": "2024-07-10 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2024-07-06 00:00:00",
+        "pre_end": "2024-07-08 00:00:00",
+        "impact_end": "2024-07-09 00:00:00",
+        "time_end": "2024-07-10 00:00:00"
+      },
+      "enabled": false
+    },
+    {
+      "id": "yagi",
+      "display_name": "Yagi",
+      "region_name": "Northern Vietnam",
+      "station": {
+        "id": "48820",
+        "latitude": 21.03,
+        "longitude": 105.8
+      },
+      "era5": {
+        "data_dir": "data/era5_yagi",
+        "area": [
+          21.5,
+          105.25,
+          20.5,
+          106.25
+        ],
+        "start_date": "2024-09-05",
+        "end_date": "2024-09-10"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/48820_Yagi",
+        "start_time": "2024-09-05 00:00:00",
+        "end_time": "2024-09-10 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2024-09-05 00:00:00",
+        "pre_end": "2024-09-07 00:00:00",
+        "impact_end": "2024-09-08 12:00:00",
+        "time_end": "2024-09-10 00:00:00"
+      },
+      "enabled": false
+    },
+    {
+      "id": "jasper",
+      "display_name": "Jasper",
+      "region_name": "Cairns",
+      "station": {
+        "id": "94287",
+        "latitude": -16.88,
+        "longitude": 145.75
+      },
+      "era5": {
+        "data_dir": "data/era5_jasper",
+        "area": [
+          -16.25,
+          145.25,
+          -17.25,
+          146.25
+        ],
+        "start_date": "2023-12-11",
+        "end_date": "2023-12-16"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/94287_Jasper",
+        "start_time": "2023-12-11 00:00:00",
+        "end_time": "2023-12-16 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2023-12-11 00:00:00",
+        "pre_end": "2023-12-13 00:00:00",
+        "impact_end": "2023-12-15 00:00:00",
+        "time_end": "2023-12-16 00:00:00"
+      },
+      "enabled": false
+    },
+    {
+      "id": "nanmadol",
+      "display_name": "Nanmadol",
+      "region_name": "Japan",
+      "station": {
+        "id": "47827",
+        "latitude": 31.55,
+        "longitude": 130.55
+      },
+      "era5": {
+        "data_dir": "data/era5_nanmadol",
+        "area": [
+          32.05,
+          130.05,
+          31.05,
+          131.05
+        ],
+        "start_date": "2022-09-16",
+        "end_date": "2022-09-21"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/47827_Nanmadol",
+        "start_time": "2022-09-16 00:00:00",
+        "end_time": "2022-09-21 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2022-09-16 00:00:00",
+        "pre_end": "2022-09-18 00:00:00",
+        "impact_end": "2022-09-19 12:00:00",
+        "time_end": "2022-09-21 00:00:00"
+      },
+      "enabled": false
+    },
+    {
+      "id": "hinnamnor",
+      "display_name": "Hinnamnor",
+      "region_name": "Korea",
+      "station": {
+        "id": "47185",
+        "latitude": 33.29,
+        "longitude": 126.16
+      },
+      "era5": {
+        "data_dir": "data/era5_hinnamnor",
+        "area": [
+          33.79,
+          125.66,
+          32.79,
+          126.66
+        ],
+        "start_date": "2022-09-03",
+        "end_date": "2022-09-08"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/47185_Hinnamnor",
+        "start_time": "2022-09-03 00:00:00",
+        "end_time": "2022-09-08 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2022-09-03 00:00:00",
+        "pre_end": "2022-09-05 00:00:00",
+        "impact_end": "2022-09-06 12:00:00",
+        "time_end": "2022-09-08 00:00:00"
+      },
+      "enabled": false
+    },
+    {
+      "id": "ida",
+      "display_name": "Ida",
+      "region_name": "Louisiana",
+      "station": {
+        "id": "72233",
+        "latitude": 30.34,
+        "longitude": -89.82
+      },
+      "era5": {
+        "data_dir": "data/era5_ida",
+        "area": [
+          30.84,
+          -90.32,
+          29.84,
+          -89.32
+        ],
+        "start_date": "2021-08-27",
+        "end_date": "2021-09-01"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72233_Ida",
+        "start_time": "2021-08-27 00:00:00",
+        "end_time": "2021-09-01 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2021-08-27 00:00:00",
+        "pre_end": "2021-08-29 00:00:00",
+        "impact_end": "2021-08-30 12:00:00",
+        "time_end": "2021-09-01 00:00:00"
+      },
+      "enabled": false
+    },
+    {
+      "id": "rai",
+      "display_name": "Rai",
+      "region_name": "Philippines",
+      "station": {
+        "id": "98646",
+        "latitude": 10.32,
+        "longitude": 123.98
+      },
+      "era5": {
+        "data_dir": "data/era5_rai",
+        "area": [
+          10.82,
+          123.48,
+          9.82,
+          124.48
+        ],
+        "start_date": "2021-12-15",
+        "end_date": "2021-12-20"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/98646_Rai",
+        "start_time": "2021-12-15 00:00:00",
+        "end_time": "2021-12-20 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2021-12-15 00:00:00",
+        "pre_end": "2021-12-16 00:00:00",
+        "impact_end": "2021-12-18 00:00:00",
+        "time_end": "2021-12-20 00:00:00"
+      },
+      "enabled": false
+    },
+    {
+      "id": "laura",
+      "display_name": "Laura",
+      "region_name": "Louisiana",
+      "station": {
+        "id": "72240",
+        "latitude": 30.12,
+        "longitude": -93.22
+      },
+      "era5": {
+        "data_dir": "data/era5_laura",
+        "area": [
+          30.62,
+          -93.72,
+          29.62,
+          -92.72
+        ],
+        "start_date": "2020-08-24",
+        "end_date": "2020-08-29"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72240_Laura",
+        "start_time": "2020-08-24 00:00:00",
+        "end_time": "2020-08-29 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2020-08-24 00:00:00",
+        "pre_end": "2020-08-26 00:00:00",
+        "impact_end": "2020-08-27 12:00:00",
+        "time_end": "2020-08-29 00:00:00"
+      },
+      "enabled": false
+    },
+    {
+      "id": "haishen",
+      "display_name": "Haishen",
+      "region_name": "Japan",
+      "station": {
+        "id": "47807",
+        "latitude": 33.58,
+        "longitude": 130.38
+      },
+      "era5": {
+        "data_dir": "data/era5_haishen",
+        "area": [
+          34.08,
+          129.88,
+          33.08,
+          130.88
+        ],
+        "start_date": "2020-09-04",
+        "end_date": "2020-09-09"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/47807_Haishen",
+        "start_time": "2020-09-04 00:00:00",
+        "end_time": "2020-09-09 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2020-09-04 00:00:00",
+        "pre_end": "2020-09-06 00:00:00",
+        "impact_end": "2020-09-07 12:00:00",
+        "time_end": "2020-09-09 00:00:00"
+      },
+      "enabled": false
+    },
+    {
+      "id": "amphan",
+      "display_name": "Amphan",
+      "region_name": "India",
+      "station": {
+        "id": "42809",
+        "latitude": 22.65,
+        "longitude": 88.45
+      },
+      "era5": {
+        "data_dir": "data/era5_amphan",
+        "area": [
+          23.15,
+          87.95,
+          22.15,
+          88.95
+        ],
+        "start_date": "2020-05-18",
+        "end_date": "2020-05-23"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/42809_Amphan",
+        "start_time": "2020-05-18 00:00:00",
+        "end_time": "2020-05-23 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2020-05-18 00:00:00",
+        "pre_end": "2020-05-20 00:00:00",
+        "impact_end": "2020-05-21 12:00:00",
+        "time_end": "2020-05-23 00:00:00"
+      },
+      "enabled": false
+    },
+    {
+      "id": "fani",
+      "display_name": "Fani",
+      "region_name": "Odisha",
+      "station": {
+        "id": "42971",
+        "latitude": 20.25,
+        "longitude": 85.83
+      },
+      "era5": {
+        "data_dir": "data/era5_fani",
+        "area": [
+          20.75,
+          85.33,
+          19.75,
+          86.33
+        ],
+        "start_date": "2019-05-01",
+        "end_date": "2019-05-05"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/42971_Fani",
+        "start_time": "2019-05-01 00:00:00",
+        "end_time": "2019-05-05 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2019-05-01 00:00:00",
+        "pre_end": "2019-05-03 00:00:00",
+        "impact_end": "2019-05-04 00:00:00",
+        "time_end": "2019-05-05 00:00:00"
+      },
+      "enabled": false
+    },
+    {
+      "id": "mawar",
+      "display_name": "Mawar",
+      "region_name": "Guam",
+      "station": {
+        "id": "91212",
+        "latitude": 13.48,
+        "longitude": 144.8
+      },
+      "era5": {
+        "data_dir": "data/era5_mawar",
+        "area": [
+          13.98,
+          144.3,
+          12.98,
+          145.3
+        ],
+        "start_date": "2023-05-21",
+        "end_date": "2023-05-28"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/91212_Mawar",
+        "start_time": "2023-05-21 00:00:00",
+        "end_time": "2023-05-28 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2023-05-21 00:00:00",
+        "pre_end": "2023-05-23 00:00:00",
+        "impact_end": "2023-05-25 00:00:00",
+        "time_end": "2023-05-28 00:00:00"
+      },
+      "enabled": false
+    },
+    {
+      "id": "saola",
+      "display_name": "Saola",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_saola",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2023-08-30",
+        "end_date": "2023-09-05"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Saola",
+        "start_time": "2023-08-30 00:00:00",
+        "end_time": "2023-09-05 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2023-08-30 00:00:00",
+        "pre_end": "2023-09-01 00:00:00",
+        "impact_end": "2023-09-02 00:00:00",
+        "time_end": "2023-09-05 00:00:00"
+      },
+      "enabled": false
+    },
+    {
+      "id": "ian",
+      "display_name": "Ian",
+      "region_name": "Florida",
+      "station": {
+        "id": "72210",
+        "latitude": 27.7,
+        "longitude": -82.4
+      },
+      "era5": {
+        "data_dir": "data/era5_ian",
+        "area": [
+          28.2,
+          -82.9,
+          27.2,
+          -81.9
+        ],
+        "start_date": "2022-09-26",
+        "end_date": "2022-10-01"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72210_Ian",
+        "start_time": "2022-09-26 00:00:00",
+        "end_time": "2022-10-01 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2022-09-26 00:00:00",
+        "pre_end": "2022-09-28 00:00:00",
+        "impact_end": "2022-09-29 12:00:00",
+        "time_end": "2022-10-01 00:00:00"
+      },
+      "enabled": false
+    },
+    {
+      "id": "michael",
+      "display_name": "Michael",
+      "region_name": "Florida Panhandle",
+      "station": {
+        "id": "72214",
+        "latitude": 30.4461,
+        "longitude": -84.2994
+      },
+      "era5": {
+        "data_dir": "data/era5_michael",
+        "area": [
+          31.0,
+          -84.75,
+          30.0,
+          -83.75
+        ],
+        "start_date": "2018-10-08",
+        "end_date": "2018-10-12"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72214_Michael",
+        "start_time": "2018-10-08 00:00:00",
+        "end_time": "2018-10-12 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2018-10-08 00:00:00",
+        "pre_end": "2018-10-10 00:00:00",
+        "impact_end": "2018-10-11 00:00:00",
+        "time_end": "2018-10-12 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "harvey",
+      "display_name": "Harvey",
+      "region_name": "Texas Coastal Bend",
+      "station": {
+        "id": "72251",
+        "latitude": 27.7789,
+        "longitude": -97.5055
+      },
+      "era5": {
+        "data_dir": "data/era5_harvey",
+        "area": [
+          28.25,
+          -98.0,
+          27.25,
+          -97.0
+        ],
+        "start_date": "2017-08-24",
+        "end_date": "2017-08-30"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72251_Harvey",
+        "start_time": "2017-08-24 00:00:00",
+        "end_time": "2017-08-30 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2017-08-24 00:00:00",
+        "pre_end": "2017-08-25 12:00:00",
+        "impact_end": "2017-08-27 12:00:00",
+        "time_end": "2017-08-30 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "irma",
+      "display_name": "Irma",
+      "region_name": "Florida",
+      "station": {
+        "id": "72210",
+        "latitude": 27.7053,
+        "longitude": -82.4006
+      },
+      "era5": {
+        "data_dir": "data/era5_irma",
+        "area": [
+          28.25,
+          -82.75,
+          27.25,
+          -81.75
+        ],
+        "start_date": "2017-09-08",
+        "end_date": "2017-09-13"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72210_Irma",
+        "start_time": "2017-09-08 00:00:00",
+        "end_time": "2017-09-13 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2017-09-08 00:00:00",
+        "pre_end": "2017-09-10 00:00:00",
+        "impact_end": "2017-09-11 12:00:00",
+        "time_end": "2017-09-13 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "florence",
+      "display_name": "Florence",
+      "region_name": "North Carolina Coast",
+      "station": {
+        "id": "72305",
+        "latitude": 34.7761,
+        "longitude": -76.8767
+      },
+      "era5": {
+        "data_dir": "data/era5_florence",
+        "area": [
+          35.25,
+          -77.5,
+          34.25,
+          -76.5
+        ],
+        "start_date": "2018-09-12",
+        "end_date": "2018-09-18"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72305_Florence",
+        "start_time": "2018-09-12 00:00:00",
+        "end_time": "2018-09-18 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2018-09-12 00:00:00",
+        "pre_end": "2018-09-14 00:00:00",
+        "impact_end": "2018-09-15 12:00:00",
+        "time_end": "2018-09-18 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "matthew",
+      "display_name": "Matthew",
+      "region_name": "Northeast Florida",
+      "station": {
+        "id": "72206",
+        "latitude": 30.4839,
+        "longitude": -81.7011
+      },
+      "era5": {
+        "data_dir": "data/era5_matthew",
+        "area": [
+          31.0,
+          -82.25,
+          30.0,
+          -81.25
+        ],
+        "start_date": "2016-10-06",
+        "end_date": "2016-10-10"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72206_Matthew",
+        "start_time": "2016-10-06 00:00:00",
+        "end_time": "2016-10-10 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2016-10-06 00:00:00",
+        "pre_end": "2016-10-07 12:00:00",
+        "impact_end": "2016-10-09 00:00:00",
+        "time_end": "2016-10-10 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "dorian",
+      "display_name": "Dorian",
+      "region_name": "Northeast Florida",
+      "station": {
+        "id": "72206",
+        "latitude": 30.4839,
+        "longitude": -81.7011
+      },
+      "era5": {
+        "data_dir": "data/era5_dorian",
+        "area": [
+          31.0,
+          -82.25,
+          30.0,
+          -81.25
+        ],
+        "start_date": "2019-09-01",
+        "end_date": "2019-09-06"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72206_Dorian",
+        "start_time": "2019-09-01 00:00:00",
+        "end_time": "2019-09-06 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2019-09-01 00:00:00",
+        "pre_end": "2019-09-03 00:00:00",
+        "impact_end": "2019-09-05 00:00:00",
+        "time_end": "2019-09-06 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "fiona",
+      "display_name": "Fiona",
+      "region_name": "Puerto Rico",
+      "station": {
+        "id": "78526",
+        "latitude": 18.4317,
+        "longitude": -65.9919
+      },
+      "era5": {
+        "data_dir": "data/era5_fiona",
+        "area": [
+          19.0,
+          -66.5,
+          18.0,
+          -65.5
+        ],
+        "start_date": "2022-09-16",
+        "end_date": "2022-09-21"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/78526_Fiona",
+        "start_time": "2022-09-16 00:00:00",
+        "end_time": "2022-09-21 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2022-09-16 00:00:00",
+        "pre_end": "2022-09-18 00:00:00",
+        "impact_end": "2022-09-19 12:00:00",
+        "time_end": "2022-09-21 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "idalia",
+      "display_name": "Idalia",
+      "region_name": "Florida Big Bend",
+      "station": {
+        "id": "72214",
+        "latitude": 30.4461,
+        "longitude": -84.2994
+      },
+      "era5": {
+        "data_dir": "data/era5_idalia",
+        "area": [
+          31.0,
+          -84.75,
+          30.0,
+          -83.75
+        ],
+        "start_date": "2023-08-28",
+        "end_date": "2023-09-01"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72214_Idalia",
+        "start_time": "2023-08-28 00:00:00",
+        "end_time": "2023-09-01 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2023-08-28 00:00:00",
+        "pre_end": "2023-08-30 00:00:00",
+        "impact_end": "2023-08-31 00:00:00",
+        "time_end": "2023-09-01 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "nicole",
+      "display_name": "Nicole",
+      "region_name": "Florida",
+      "station": {
+        "id": "72210",
+        "latitude": 27.7053,
+        "longitude": -82.4006
+      },
+      "era5": {
+        "data_dir": "data/era5_nicole",
+        "area": [
+          28.25,
+          -82.75,
+          27.25,
+          -81.75
+        ],
+        "start_date": "2022-11-08",
+        "end_date": "2022-11-12"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72210_Nicole",
+        "start_time": "2022-11-08 00:00:00",
+        "end_time": "2022-11-12 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2022-11-08 00:00:00",
+        "pre_end": "2022-11-10 00:00:00",
+        "impact_end": "2022-11-11 00:00:00",
+        "time_end": "2022-11-12 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "debby",
+      "display_name": "Debby",
+      "region_name": "South Carolina Coast",
+      "station": {
+        "id": "72208",
+        "latitude": 32.895,
+        "longitude": -80.0275
+      },
+      "era5": {
+        "data_dir": "data/era5_debby",
+        "area": [
+          33.5,
+          -80.5,
+          32.5,
+          -79.5
+        ],
+        "start_date": "2024-08-04",
+        "end_date": "2024-08-09"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72208_Debby",
+        "start_time": "2024-08-04 00:00:00",
+        "end_time": "2024-08-09 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2024-08-04 00:00:00",
+        "pre_end": "2024-08-06 00:00:00",
+        "impact_end": "2024-08-08 00:00:00",
+        "time_end": "2024-08-09 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "hanna",
+      "display_name": "Hanna",
+      "region_name": "South Texas Coast",
+      "station": {
+        "id": "72251",
+        "latitude": 27.7789,
+        "longitude": -97.5055
+      },
+      "era5": {
+        "data_dir": "data/era5_hanna",
+        "area": [
+          28.25,
+          -98.0,
+          27.25,
+          -97.0
+        ],
+        "start_date": "2020-07-23",
+        "end_date": "2020-07-28"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72251_Hanna",
+        "start_time": "2020-07-23 00:00:00",
+        "end_time": "2020-07-28 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2020-07-23 00:00:00",
+        "pre_end": "2020-07-25 00:00:00",
+        "impact_end": "2020-07-26 12:00:00",
+        "time_end": "2020-07-28 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "delta",
+      "display_name": "Delta",
+      "region_name": "Louisiana",
+      "station": {
+        "id": "72240",
+        "latitude": 30.1253,
+        "longitude": -93.2161
+      },
+      "era5": {
+        "data_dir": "data/era5_delta",
+        "area": [
+          30.75,
+          -93.75,
+          29.75,
+          -92.75
+        ],
+        "start_date": "2020-10-07",
+        "end_date": "2020-10-11"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72240_Delta",
+        "start_time": "2020-10-07 00:00:00",
+        "end_time": "2020-10-11 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2020-10-07 00:00:00",
+        "pre_end": "2020-10-09 00:00:00",
+        "impact_end": "2020-10-10 12:00:00",
+        "time_end": "2020-10-11 00:00:00"
+      },
+      "enabled": true
+    }
+  ]
+}
