@@ -39,6 +39,13 @@ REQUIRED_COLS = [
     RH_PERCENT_COL,
 ]
 
+ERA5_EARTH_RADIUS_M = 6_371_229.0
+
+
+def geometric_height(geopotential_height_m: object) -> np.ndarray:
+    H = np.asarray(geopotential_height_m, dtype=float)
+    return ERA5_EARTH_RADIUS_M * H / (ERA5_EARTH_RADIUS_M - H)
+
 
 def saastamoinen_zhd(pressure_hpa: float, height_m: float, latitude_deg: float) -> float:
     """Calculate Saastamoinen hydrostatic zenith delay in meters."""
@@ -112,9 +119,11 @@ def calculate_profile_zhd(profile: pd.DataFrame, time_utc: object) -> float | No
         return None
 
     height = profile[H_COL].to_numpy(dtype=float)
+    height_geometric = geometric_height(height)
     nh = profile["Nh"].to_numpy(dtype=float)
 
     d_height = np.diff(height)
+    dz_geometric = np.diff(height_geometric)
     nh_lower = nh[:-1]
     nh_upper = nh[1:]
 
@@ -122,7 +131,7 @@ def calculate_profile_zhd(profile: pd.DataFrame, time_utc: object) -> float | No
     if not np.all(valid_interval):
         print(f"Warning: {time_utc} has negative height intervals after sorting.")
 
-    zhd_int = 1e-6 * np.sum(d_height[valid_interval] * log_mean(
+    zhd_int = 1e-6 * np.sum(dz_geometric[valid_interval] * log_mean(
         nh_lower[valid_interval],
         nh_upper[valid_interval],
     ))
@@ -132,7 +141,8 @@ def calculate_profile_zhd(profile: pd.DataFrame, time_utc: object) -> float | No
 
     top_layer = profile.loc[profile[H_COL].idxmax()]
     p_top = float(top_layer[P_COL])
-    h_top = float(top_layer[H_COL])
+    h_top_geopotential = float(top_layer[H_COL])
+    h_top_geometric = float(geometric_height(h_top_geopotential))
 
     if p_top > 100.0:
         print(
@@ -140,7 +150,7 @@ def calculate_profile_zhd(profile: pd.DataFrame, time_utc: object) -> float | No
             "greater than 100 hPa; still calculating profile ZHD."
         )
 
-    zhd_top = saastamoinen_zhd(p_top, h_top, lat_deg)
+    zhd_top = saastamoinen_zhd(p_top, h_top_geometric, lat_deg)
     return float(zhd_int + zhd_top)
 
 
@@ -174,9 +184,10 @@ def calculate_zhd(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
         longitude = float(bottom_layer[LON_COL])
         latitude = float(bottom_layer[LAT_COL])
         p0 = float(bottom_layer[P_COL])
-        h0 = float(bottom_layer[H_COL])
+        h0_geopotential = float(bottom_layer[H_COL])
+        h0_geometric = float(geometric_height(h0_geopotential))
 
-        zhd_saas = saastamoinen_zhd(p0, h0, latitude)
+        zhd_saas = saastamoinen_zhd(p0, h0_geometric, latitude)
         saas_rows.append(
             {
                 "longitude": longitude,

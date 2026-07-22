@@ -45,6 +45,13 @@ REQUIRED_COLS = [
 
 OUT_COLS = ["longitude", "latitude", "time_utc", "ZHD_m"]
 
+ERA5_EARTH_RADIUS_M = 6_371_229.0
+
+
+def geometric_height(geopotential_height_m: object) -> np.ndarray:
+    H = np.asarray(geopotential_height_m, dtype=float)
+    return ERA5_EARTH_RADIUS_M * H / (ERA5_EARTH_RADIUS_M - H)
+
 
 def saastamoinen_zhd(pressure_hpa: float, height_m: float, latitude_deg: float) -> float:
     lat_rad = np.deg2rad(latitude_deg)
@@ -175,15 +182,16 @@ def calculate_grid_profile(
 
     bottom_layer = valid.loc[valid[P_COL].idxmax()]
     p0 = float(bottom_layer[P_COL])
-    h0 = float(bottom_layer[H_COL])
+    h0_geopotential = float(bottom_layer[H_COL])
+    h0_geometric = float(geometric_height(h0_geopotential))
 
-    if h0 < 0.0:
+    if h0_geopotential < 0.0:
         print(
             f"Warning: {time_utc}, lon={longitude}, lat={latitude} "
-            f"lowest-layer height is {h0:.3f} m; keeping it."
+            f"lowest-layer geopotential height is {h0_geopotential:.3f} m; keeping it."
         )
 
-    zhd_saas = saastamoinen_zhd(p0, h0, latitude)
+    zhd_saas = saastamoinen_zhd(p0, h0_geometric, latitude)
 
     if len(valid) < 2:
         print(
@@ -213,22 +221,25 @@ def calculate_grid_profile(
         return float(zhd_saas), None
 
     height = profile[H_COL].to_numpy(dtype=float)
+    height_geometric = geometric_height(height)
     nh = profile["Nh"].to_numpy(dtype=float)
 
     d_height = np.diff(height)
+    dz_geometric = np.diff(height_geometric)
     nh_lower = nh[:-1]
     nh_upper = nh[1:]
 
     valid_interval = d_height >= 0.0
     zhd_int = 1e-6 * np.sum(
-        d_height[valid_interval]
+        dz_geometric[valid_interval]
         * log_mean(nh_lower[valid_interval], nh_upper[valid_interval])
     )
 
     top_layer = profile.loc[profile[H_COL].idxmax()]
     p_top = float(top_layer[P_COL])
-    h_top = float(top_layer[H_COL])
-    zhd_top = saastamoinen_zhd(p_top, h_top, latitude)
+    h_top_geopotential = float(top_layer[H_COL])
+    h_top_geometric = float(geometric_height(h_top_geopotential))
+    zhd_top = saastamoinen_zhd(p_top, h_top_geometric, latitude)
 
     return float(zhd_saas), float(zhd_int + zhd_top)
 

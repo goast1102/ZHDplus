@@ -35,7 +35,7 @@
         "impact_end": "2024-10-10 12:00:00",
         "time_end": "2024-10-12 00:00:00"
       },
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "helene",
@@ -109,7 +109,7 @@
         "impact_end": "2024-07-09 00:00:00",
         "time_end": "2024-07-10 00:00:00"
       },
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "yagi",
@@ -294,7 +294,7 @@
         "impact_end": "2021-08-30 12:00:00",
         "time_end": "2021-09-01 00:00:00"
       },
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "rai",
@@ -368,7 +368,7 @@
         "impact_end": "2020-08-27 12:00:00",
         "time_end": "2020-08-29 00:00:00"
       },
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "haishen",
@@ -479,7 +479,7 @@
         "impact_end": "2019-05-04 00:00:00",
         "time_end": "2019-05-05 00:00:00"
       },
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "mawar",
@@ -516,11 +516,11 @@
         "impact_end": "2023-05-25 00:00:00",
         "time_end": "2023-05-28 00:00:00"
       },
-      "enabled": false
+      "enabled": true
     },
     {
-      "id": "saola",
-      "display_name": "Saola",
+      "id": "sula",
+      "display_name": "Sula",
       "region_name": "Hong Kong",
       "station": {
         "id": "45004",
@@ -528,7 +528,7 @@
         "longitude": 114.17
       },
       "era5": {
-        "data_dir": "data/era5_saola",
+        "data_dir": "data/era5_tfsula",
         "area": [
           22.81,
           113.67,
@@ -539,7 +539,7 @@
         "end_date": "2023-09-05"
       },
       "sounding": {
-        "data_dir": "data/radiosonde/45004_Saola",
+        "data_dir": "data/radiosonde/45004_sula",
         "start_time": "2023-08-30 00:00:00",
         "end_time": "2023-09-05 00:00:00",
         "hours": [
@@ -553,7 +553,7 @@
         "impact_end": "2023-09-02 00:00:00",
         "time_end": "2023-09-05 00:00:00"
       },
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "ian",
@@ -590,7 +590,7 @@
         "impact_end": "2022-09-29 12:00:00",
         "time_end": "2022-10-01 00:00:00"
       },
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "michael",
@@ -701,7 +701,7 @@
         "impact_end": "2017-09-11 12:00:00",
         "time_end": "2017-09-13 00:00:00"
       },
-      "enabled": true
+      "enabled": false
     },
     {
       "id": "florence",
