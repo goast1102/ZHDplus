@@ -307,12 +307,14 @@ def main() -> None:
         handles, labels = ax.get_legend_handles_labels()
         if handles:
             ax.legend(
-                loc="upper right",
+                loc="upper left",
+                bbox_to_anchor=(1.01, 1.0),
+                borderaxespad=0.0,
                 frameon=True,
                 facecolor="white",
                 edgecolor="#cbd5e1",
                 framealpha=0.92,
-                ncol=2,
+                ncol=1,
             )
 
     axes[-1].set_xlabel("Time (UTC)")

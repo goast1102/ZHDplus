@@ -13,7 +13,7 @@ import pandas as pd
 ROOT_DIR = Path(__file__).resolve().parents[1]
 CONFIG_JSON = Path(__file__).with_name("typhoon_events.json")
 OUT_DIR = ROOT_DIR / "out1"
-PLOT_DIR = OUT_DIR / "experiment_timeseries"
+PLOT_DIR = OUT_DIR / "experiment_timeseries_all_events"
 
 ERA5_PROFILES_CSV = OUT_DIR / "zhd_dz_experiment_era5_profiles.csv"
 SOUNDING_PROFILES_CSV = OUT_DIR / "zhd_dz_experiment_sounding_profiles.csv"
@@ -304,12 +304,14 @@ def save_event_plot(
         handles, _ = ax.get_legend_handles_labels()
         if handles:
             ax.legend(
-                loc="upper right",
+                loc="upper left",
+                bbox_to_anchor=(1.01, 1.0),
+                borderaxespad=0.0,
                 frameon=True,
                 facecolor="white",
                 edgecolor="#cbd5e1",
                 framealpha=0.92,
-                ncol=2,
+                ncol=1,
             )
 
     axes[-1].set_xlabel("Time (UTC)")
@@ -325,9 +327,8 @@ def save_event_plot(
         title = f"ZHD dz Experiment Time Series During Typhoon {display_name}"
     fig.suptitle(title, fontsize=17, fontweight="bold", y=1.12)
 
-    out_dir = PLOT_DIR / event_id
-    out_dir.mkdir(parents=True, exist_ok=True)
-    out_png = out_dir / "zhd_dz_experiment_timeseries_rs_era5.png"
+    PLOT_DIR.mkdir(parents=True, exist_ok=True)
+    out_png = PLOT_DIR / f"{event_id}_zhd_dz_experiment_timeseries_rs_era5.png"
     fig.savefig(out_png, dpi=600, bbox_inches="tight")
     plt.close(fig)
     return out_png

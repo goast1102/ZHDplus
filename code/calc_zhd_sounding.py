@@ -39,12 +39,48 @@ REQUIRED_COLS = [
     RH_PERCENT_COL,
 ]
 
-ERA5_EARTH_RADIUS_M = 6_371_229.0
+GAMMA_45 = 9.80665
+WGS84_A_M = 6_378_137.0
+WGS84_F = 1 / 298.257223563
+WGS84_E2 = WGS84_F * (2 - WGS84_F)
+
+GAMMA_E = 9.7803253359
+SOMIGLIANA_K = 1.931853e-3
+GRAVITY_RATIO_M = 0.003449787
+
+NEWTON_INITIAL_SPHERICAL_RADIUS_M = 6_371_229.0
 
 
-def geometric_height(geopotential_height_m: object) -> np.ndarray:
+def _sin2_lat(latitude_deg: object) -> np.ndarray:
+    phi = np.deg2rad(latitude_deg)
+    return np.sin(phi) ** 2
+
+
+def mahoney_surface_gravity(latitude_deg: object) -> np.ndarray:
+    sin2 = _sin2_lat(latitude_deg)
+    return GAMMA_E * (1.0 + SOMIGLIANA_K * sin2) / np.sqrt(1.0 - WGS84_E2 * sin2)
+
+
+def geometric_height(
+    geopotential_height_m: object,
+    latitude_deg: object,
+) -> np.ndarray:
     H = np.asarray(geopotential_height_m, dtype=float)
-    return ERA5_EARTH_RADIUS_M * H / (ERA5_EARTH_RADIUS_M - H)
+    sin2 = _sin2_lat(latitude_deg)
+    gamma_s = mahoney_surface_gravity(latitude_deg)
+    b = 1.0 + WGS84_F + GRAVITY_RATIO_M - 2.0 * WGS84_F * sin2
+    c = gamma_s / GAMMA_45
+
+    z = NEWTON_INITIAL_SPHERICAL_RADIUS_M * H / (
+        NEWTON_INITIAL_SPHERICAL_RADIUS_M - H
+    )
+    for _ in range(8):
+        integral_h = c * (z - b * z**2 / WGS84_A_M + z**3 / WGS84_A_M**2)
+        derivative = c * (
+            1.0 - 2.0 * b * z / WGS84_A_M + 3.0 * z**2 / WGS84_A_M**2
+        )
+        z -= (integral_h - H) / derivative
+    return z
 
 
 def saastamoinen_zhd(pressure_hpa: float, height_m: float, latitude_deg: float) -> float:
@@ -118,8 +154,11 @@ def calculate_profile_zhd(profile: pd.DataFrame, time_utc: object) -> float | No
         )
         return None
 
+    bottom_layer = profile.loc[profile[P_COL].idxmax()]
+    lat_deg = float(bottom_layer[LAT_COL])
+
     height = profile[H_COL].to_numpy(dtype=float)
-    height_geometric = geometric_height(height)
+    height_geometric = geometric_height(height, lat_deg)
     nh = profile["Nh"].to_numpy(dtype=float)
 
     d_height = np.diff(height)
@@ -131,18 +170,18 @@ def calculate_profile_zhd(profile: pd.DataFrame, time_utc: object) -> float | No
     if not np.all(valid_interval):
         print(f"Warning: {time_utc} has negative height intervals after sorting.")
 
-    zhd_int = 1e-6 * np.sum(dz_geometric[valid_interval] * log_mean(
-        nh_lower[valid_interval],
-        nh_upper[valid_interval],
-    ))
-
-    bottom_layer = profile.loc[profile[P_COL].idxmax()]
-    lat_deg = float(bottom_layer[LAT_COL])
+    zhd_int = 1e-6 * np.sum(
+        dz_geometric[valid_interval]
+        * log_mean(
+            nh_lower[valid_interval],
+            nh_upper[valid_interval],
+        )
+    )
 
     top_layer = profile.loc[profile[H_COL].idxmax()]
     p_top = float(top_layer[P_COL])
     h_top_geopotential = float(top_layer[H_COL])
-    h_top_geometric = float(geometric_height(h_top_geopotential))
+    h_top_geometric = float(geometric_height(h_top_geopotential, lat_deg))
 
     if p_top > 100.0:
         print(
@@ -185,7 +224,7 @@ def calculate_zhd(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
         latitude = float(bottom_layer[LAT_COL])
         p0 = float(bottom_layer[P_COL])
         h0_geopotential = float(bottom_layer[H_COL])
-        h0_geometric = float(geometric_height(h0_geopotential))
+        h0_geometric = float(geometric_height(h0_geopotential, latitude))
 
         zhd_saas = saastamoinen_zhd(p0, h0_geometric, latitude)
         saas_rows.append(

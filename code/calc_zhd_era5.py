@@ -45,12 +45,49 @@ REQUIRED_COLS = [
 
 OUT_COLS = ["longitude", "latitude", "time_utc", "ZHD_m"]
 
-ERA5_EARTH_RADIUS_M = 6_371_229.0
+GAMMA_45 = 9.80665
+WGS84_A_M = 6_378_137.0
+WGS84_F = 1 / 298.257223563
+WGS84_E2 = WGS84_F * (2 - WGS84_F)
+
+GAMMA_E = 9.7803253359
+SOMIGLIANA_K = 1.931853e-3
+GRAVITY_RATIO_M = 0.003449787
+
+NEWTON_INITIAL_SPHERICAL_RADIUS_M = 6_371_229.0
 
 
-def geometric_height(geopotential_height_m: object) -> np.ndarray:
+def _sin2_lat(latitude_deg: object) -> np.ndarray:
+    phi = np.deg2rad(latitude_deg)
+    return np.sin(phi) ** 2
+
+
+def mahoney_surface_gravity(latitude_deg: object) -> np.ndarray:
+    sin2 = _sin2_lat(latitude_deg)
+    return GAMMA_E * (1.0 + SOMIGLIANA_K * sin2) / np.sqrt(1.0 - WGS84_E2 * sin2)
+
+
+def geometric_height(
+    geopotential_height_m: object,
+    latitude_deg: object,
+) -> np.ndarray:
     H = np.asarray(geopotential_height_m, dtype=float)
-    return ERA5_EARTH_RADIUS_M * H / (ERA5_EARTH_RADIUS_M - H)
+    sin2 = _sin2_lat(latitude_deg)
+    gamma_s = mahoney_surface_gravity(latitude_deg)
+    b = 1.0 + WGS84_F + GRAVITY_RATIO_M - 2.0 * WGS84_F * sin2
+    c = gamma_s / GAMMA_45
+
+
+    z = NEWTON_INITIAL_SPHERICAL_RADIUS_M * H / (
+        NEWTON_INITIAL_SPHERICAL_RADIUS_M - H
+    )
+    for _ in range(8):
+        integral_h = c * (z - b * z**2 / WGS84_A_M + z**3 / WGS84_A_M**2)
+        derivative = c * (
+            1.0 - 2.0 * b * z / WGS84_A_M + 3.0 * z**2 / WGS84_A_M**2
+        )
+        z -= (integral_h - H) / derivative
+    return z
 
 
 def saastamoinen_zhd(pressure_hpa: float, height_m: float, latitude_deg: float) -> float:
@@ -183,7 +220,7 @@ def calculate_grid_profile(
     bottom_layer = valid.loc[valid[P_COL].idxmax()]
     p0 = float(bottom_layer[P_COL])
     h0_geopotential = float(bottom_layer[H_COL])
-    h0_geometric = float(geometric_height(h0_geopotential))
+    h0_geometric = float(geometric_height(h0_geopotential, latitude))
 
     if h0_geopotential < 0.0:
         print(
@@ -221,7 +258,7 @@ def calculate_grid_profile(
         return float(zhd_saas), None
 
     height = profile[H_COL].to_numpy(dtype=float)
-    height_geometric = geometric_height(height)
+    height_geometric = geometric_height(height, latitude)
     nh = profile["Nh"].to_numpy(dtype=float)
 
     d_height = np.diff(height)
@@ -238,7 +275,7 @@ def calculate_grid_profile(
     top_layer = profile.loc[profile[H_COL].idxmax()]
     p_top = float(top_layer[P_COL])
     h_top_geopotential = float(top_layer[H_COL])
-    h_top_geometric = float(geometric_height(h_top_geopotential))
+    h_top_geometric = float(geometric_height(h_top_geopotential, latitude))
     zhd_top = saastamoinen_zhd(p_top, h_top_geometric, latitude)
 
     return float(zhd_saas), float(zhd_int + zhd_top)
