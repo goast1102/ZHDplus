@@ -1,0 +1,354 @@
+{
+  "description": "Station catalog and workflow sets for 2025 global radiosonde/ERA5 verification.",
+  "coordinate_note": "Station coordinates are provided by the user table. ERA5 areas are the 0.25 degree floor/ceil boxes enclosing each station; they are not forcibly expanded to four grid points.",
+  "era5_grid_rule": {
+    "grid_step_deg": 0.25,
+    "area_order": [
+      "north",
+      "west",
+      "south",
+      "east"
+    ],
+    "rule": "Use ceil(latitude/0.25)*0.25, floor(longitude/0.25)*0.25, floor(latitude/0.25)*0.25, ceil(longitude/0.25)*0.25."
+  },
+  "sounding": {
+    "hours": [
+      0,
+      12
+    ],
+    "provider": "Wyoming upper-air sounding CSV endpoint"
+  },
+  "stations": [
+    {
+      "id": "71917",
+      "slug": "eureka",
+      "name": "Eureka",
+      "latitude": 79.9944,
+      "longitude": -85.8119,
+      "era5_area": [
+        80.0,
+        -86.0,
+        79.75,
+        -85.75
+      ]
+    },
+    {
+      "id": "70273",
+      "slug": "anchorage",
+      "name": "Anchorage",
+      "latitude": 61.1567,
+      "longitude": -149.9863,
+      "era5_area": [
+        61.25,
+        -150.0,
+        61.0,
+        -149.75
+      ]
+    },
+    {
+      "id": "72249",
+      "slug": "fort_worth",
+      "name": "Fort Worth",
+      "latitude": 32.835,
+      "longitude": -97.2986,
+      "era5_area": [
+        33.0,
+        -97.5,
+        32.75,
+        -97.25
+      ]
+    },
+    {
+      "id": "78954",
+      "slug": "grantley_adams",
+      "name": "Grantley Adams",
+      "latitude": 13.0716,
+      "longitude": -59.4922,
+      "era5_area": [
+        13.25,
+        -59.5,
+        13.0,
+        -59.25
+      ]
+    },
+    {
+      "id": "82332",
+      "slug": "manaus",
+      "name": "Manaus",
+      "latitude": -3.15,
+      "longitude": -59.9833,
+      "era5_area": [
+        -3.0,
+        -60.0,
+        -3.25,
+        -59.75
+      ]
+    },
+    {
+      "id": "87860",
+      "slug": "comodoro_rivadavia",
+      "name": "Comodoro Rivadavia",
+      "latitude": -45.7923,
+      "longitude": -67.4619,
+      "era5_area": [
+        -45.75,
+        -67.5,
+        -46.0,
+        -67.25
+      ]
+    },
+    {
+      "id": "61052",
+      "slug": "niamey",
+      "name": "Niamey",
+      "latitude": 13.2841,
+      "longitude": 2.1147,
+      "era5_area": [
+        13.5,
+        2.0,
+        13.25,
+        2.25
+      ]
+    },
+    {
+      "id": "68816",
+      "slug": "cape_town",
+      "name": "Cape Town",
+      "latitude": -33.9631,
+      "longitude": 18.6023,
+      "era5_area": [
+        -33.75,
+        18.5,
+        -34.0,
+        18.75
+      ]
+    },
+    {
+      "id": "61980",
+      "slug": "saint_denis",
+      "name": "Saint-Denis",
+      "latitude": -20.8925,
+      "longitude": 55.5286,
+      "era5_area": [
+        -20.75,
+        55.5,
+        -21.0,
+        55.75
+      ]
+    },
+    {
+      "id": "07145",
+      "slug": "trappes",
+      "name": "Trappes",
+      "latitude": 48.7744,
+      "longitude": 2.0097,
+      "era5_area": [
+        49.0,
+        2.0,
+        48.75,
+        2.25
+      ]
+    },
+    {
+      "id": "10393",
+      "slug": "lindenberg",
+      "name": "Lindenberg",
+      "latitude": 52.2085,
+      "longitude": 14.118,
+      "era5_area": [
+        52.25,
+        14.0,
+        52.0,
+        14.25
+      ]
+    },
+    {
+      "id": "40417",
+      "slug": "king_fahd_airport",
+      "name": "King Fahd Airport",
+      "latitude": 26.4461,
+      "longitude": 49.8097,
+      "era5_area": [
+        26.5,
+        49.75,
+        26.25,
+        50.0
+      ]
+    },
+    {
+      "id": "54511",
+      "slug": "beijing",
+      "name": "Beijing",
+      "latitude": 39.9333,
+      "longitude": 116.2833,
+      "era5_area": [
+        40.0,
+        116.25,
+        39.75,
+        116.5
+      ]
+    },
+    {
+      "id": "47646",
+      "slug": "tateno",
+      "name": "Tateno",
+      "latitude": 36.0581,
+      "longitude": 140.1258,
+      "era5_area": [
+        36.25,
+        140.0,
+        36.0,
+        140.25
+      ]
+    },
+    {
+      "id": "43371",
+      "slug": "thiruvananthapuram",
+      "name": "Thiruvananthapuram",
+      "latitude": 8.4833,
+      "longitude": 76.95,
+      "era5_area": [
+        8.5,
+        76.75,
+        8.25,
+        77.0
+      ]
+    },
+    {
+      "id": "48698",
+      "slug": "singapore_changi",
+      "name": "Singapore/Changi",
+      "latitude": 1.3679,
+      "longitude": 103.9824,
+      "era5_area": [
+        1.5,
+        103.75,
+        1.25,
+        104.0
+      ]
+    },
+    {
+      "id": "94610",
+      "slug": "perth_airport",
+      "name": "Perth Airport",
+      "latitude": -31.9275,
+      "longitude": 115.9764,
+      "era5_area": [
+        -31.75,
+        115.75,
+        -32.0,
+        116.0
+      ]
+    },
+    {
+      "id": "93112",
+      "slug": "whenuapai",
+      "name": "Whenuapai",
+      "latitude": -36.7928,
+      "longitude": 174.6214,
+      "era5_area": [
+        -36.75,
+        174.5,
+        -37.0,
+        174.75
+      ]
+    },
+    {
+      "id": "91376",
+      "slug": "majuro",
+      "name": "Majuro",
+      "latitude": 7.0683,
+      "longitude": 171.2942,
+      "era5_area": [
+        7.25,
+        171.25,
+        7.0,
+        171.5
+      ]
+    },
+    {
+      "id": "89664",
+      "slug": "mcmurdo",
+      "name": "McMurdo",
+      "latitude": -77.85,
+      "longitude": 166.6667,
+      "era5_area": [
+        -77.75,
+        166.5,
+        -78.0,
+        166.75
+      ]
+    }
+  ],
+  "workflow_sets": {
+    "twenty_stations_january_and_august_2025": {
+      "description": "Download all 20 stations for January 2025 and August 2025, plus ERA5 pressure-level data over each station's 0.25 degree floor/ceil grid box.",
+      "station_ids": [
+        "71917",
+        "70273",
+        "72249",
+        "78954",
+        "82332",
+        "87860",
+        "61052",
+        "68816",
+        "61980",
+        "07145",
+        "10393",
+        "40417",
+        "54511",
+        "47646",
+        "43371",
+        "48698",
+        "94610",
+        "93112",
+        "91376",
+        "89664"
+      ],
+      "windows": [
+        {
+          "id": "2025_january",
+          "label": "January 2025",
+          "start_time": "2025-01-01 00:00:00",
+          "end_time": "2025-01-31 12:00:00",
+          "era5_start_date": "2025-01-01",
+          "era5_end_date": "2025-01-31"
+        },
+        {
+          "id": "2025_august",
+          "label": "August 2025",
+          "start_time": "2025-08-01 00:00:00",
+          "end_time": "2025-08-31 12:00:00",
+          "era5_start_date": "2025-08-01",
+          "era5_end_date": "2025-08-31"
+        }
+      ],
+      "output_dir_template": "out/verification/{workflow_id}/{station_id}_{slug}/{window_id}",
+      "sounding_data_dir_template": "data/verification/radiosonde/{station_id}_{slug}/{window_id}",
+      "era5_data_dir_template": "data/verification/era5/{station_id}_{slug}/{window_id}"
+    },
+    "four_global_stations_full_year_2025": {
+      "description": "Download four globally distributed stations for all of 2025, plus ERA5 pressure-level data over each station's 0.25 degree floor/ceil grid box.",
+      "selection_reason": "Four-station subset spreads the sample across Arctic North America, tropical Africa, Southern Hemisphere mid-latitude Australia, and Antarctica.",
+      "station_ids": [
+        "71917",
+        "61052",
+        "94610",
+        "89664"
+      ],
+      "windows": [
+        {
+          "id": "2025_full_year",
+          "label": "Full year 2025",
+          "start_time": "2025-01-01 00:00:00",
+          "end_time": "2025-12-31 12:00:00",
+          "era5_start_date": "2025-01-01",
+          "era5_end_date": "2025-12-31"
+        }
+      ],
+      "output_dir_template": "out/verification/{workflow_id}/{station_id}_{slug}/{window_id}",
+      "sounding_data_dir_template": "data/verification/radiosonde/{station_id}_{slug}/{window_id}",
+      "era5_data_dir_template": "data/verification/era5/{station_id}_{slug}/{window_id}"
+    }
+  }
+}
