@@ -35,7 +35,7 @@
         "impact_end": "2024-10-10 12:00:00",
         "time_end": "2024-10-12 00:00:00"
       },
-      "enabled": true
+      "enabled": false
     },
     {
       "id": "helene",
@@ -109,7 +109,7 @@
         "impact_end": "2024-07-09 00:00:00",
         "time_end": "2024-07-10 00:00:00"
       },
-      "enabled": true
+      "enabled": false
     },
     {
       "id": "yagi",
@@ -294,7 +294,7 @@
         "impact_end": "2021-08-30 12:00:00",
         "time_end": "2021-09-01 00:00:00"
       },
-      "enabled": true
+      "enabled": false
     },
     {
       "id": "rai",
@@ -368,7 +368,7 @@
         "impact_end": "2020-08-27 12:00:00",
         "time_end": "2020-08-29 00:00:00"
       },
-      "enabled": true
+      "enabled": false
     },
     {
       "id": "haishen",
@@ -479,7 +479,7 @@
         "impact_end": "2019-05-04 00:00:00",
         "time_end": "2019-05-05 00:00:00"
       },
-      "enabled": true
+      "enabled": false
     },
     {
       "id": "mawar",
@@ -516,7 +516,7 @@
         "impact_end": "2023-05-25 00:00:00",
         "time_end": "2023-05-28 00:00:00"
       },
-      "enabled": true
+      "enabled": false
     },
     {
       "id": "sula",
@@ -553,7 +553,7 @@
         "impact_end": "2023-09-02 00:00:00",
         "time_end": "2023-09-05 00:00:00"
       },
-      "enabled": true
+      "enabled": false
     },
     {
       "id": "ian",
@@ -590,7 +590,7 @@
         "impact_end": "2022-09-29 12:00:00",
         "time_end": "2022-10-01 00:00:00"
       },
-      "enabled": true
+      "enabled": false
     },
     {
       "id": "michael",
@@ -627,7 +627,7 @@
         "impact_end": "2018-10-11 00:00:00",
         "time_end": "2018-10-12 00:00:00"
       },
-      "enabled": true
+      "enabled": false
     },
     {
       "id": "harvey",
@@ -738,7 +738,7 @@
         "impact_end": "2018-09-15 12:00:00",
         "time_end": "2018-09-18 00:00:00"
       },
-      "enabled": true
+      "enabled": false
     },
     {
       "id": "matthew",
@@ -775,7 +775,7 @@
         "impact_end": "2016-10-09 00:00:00",
         "time_end": "2016-10-10 00:00:00"
       },
-      "enabled": true
+      "enabled": false
     },
     {
       "id": "dorian",
@@ -812,7 +812,7 @@
         "impact_end": "2019-09-05 00:00:00",
         "time_end": "2019-09-06 00:00:00"
       },
-      "enabled": true
+      "enabled": false
     },
     {
       "id": "fiona",
@@ -849,7 +849,7 @@
         "impact_end": "2022-09-19 12:00:00",
         "time_end": "2022-09-21 00:00:00"
       },
-      "enabled": true
+      "enabled": false
     },
     {
       "id": "idalia",
@@ -886,7 +886,7 @@
         "impact_end": "2023-08-31 00:00:00",
         "time_end": "2023-09-01 00:00:00"
       },
-      "enabled": true
+      "enabled": false
     },
     {
       "id": "nicole",
@@ -923,7 +923,7 @@
         "impact_end": "2022-11-11 00:00:00",
         "time_end": "2022-11-12 00:00:00"
       },
-      "enabled": true
+      "enabled": false
     },
     {
       "id": "debby",
@@ -960,7 +960,7 @@
         "impact_end": "2024-08-08 00:00:00",
         "time_end": "2024-08-09 00:00:00"
       },
-      "enabled": true
+      "enabled": false
     },
     {
       "id": "hanna",
@@ -997,7 +997,7 @@
         "impact_end": "2020-07-26 12:00:00",
         "time_end": "2020-07-28 00:00:00"
       },
-      "enabled": true
+      "enabled": false
     },
     {
       "id": "delta",
@@ -1033,6 +1033,2596 @@
         "pre_end": "2020-10-09 00:00:00",
         "impact_end": "2020-10-10 12:00:00",
         "time_end": "2020-10-11 00:00:00"
+      },
+      "enabled": false
+    },
+    {
+      "id": "francine",
+      "display_name": "Francine",
+      "region_name": "Louisiana",
+      "station": {
+        "id": "72233",
+        "latitude": 30.34,
+        "longitude": -89.82
+      },
+      "era5": {
+        "data_dir": "data/era5_francine",
+        "area": [
+          30.84,
+          -90.32,
+          29.84,
+          -89.32
+        ],
+        "start_date": "2024-09-09",
+        "end_date": "2024-09-13"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72233_Francine",
+        "start_time": "2024-09-09 00:00:00",
+        "end_time": "2024-09-13 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2024-09-09 00:00:00",
+        "pre_end": "2024-09-10 12:00:00",
+        "impact_end": "2024-09-12 00:00:00",
+        "time_end": "2024-09-13 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "ernesto_2024",
+      "display_name": "Ernesto (2024)",
+      "region_name": "Puerto Rico",
+      "station": {
+        "id": "78526",
+        "latitude": 18.4317,
+        "longitude": -65.9919
+      },
+      "era5": {
+        "data_dir": "data/era5_ernesto_2024",
+        "area": [
+          19.0,
+          -66.5,
+          18.0,
+          -65.5
+        ],
+        "start_date": "2024-08-12",
+        "end_date": "2024-08-17"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/78526_Ernesto_2024",
+        "start_time": "2024-08-12 00:00:00",
+        "end_time": "2024-08-17 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2024-08-12 00:00:00",
+        "pre_end": "2024-08-14 00:00:00",
+        "impact_end": "2024-08-15 12:00:00",
+        "time_end": "2024-08-17 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "ophelia",
+      "display_name": "Ophelia",
+      "region_name": "North Carolina Coast",
+      "station": {
+        "id": "72305",
+        "latitude": 34.7761,
+        "longitude": -76.8767
+      },
+      "era5": {
+        "data_dir": "data/era5_ophelia",
+        "area": [
+          35.25,
+          -77.5,
+          34.25,
+          -76.5
+        ],
+        "start_date": "2023-09-21",
+        "end_date": "2023-09-25"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72305_Ophelia",
+        "start_time": "2023-09-21 00:00:00",
+        "end_time": "2023-09-25 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2023-09-21 00:00:00",
+        "pre_end": "2023-09-22 12:00:00",
+        "impact_end": "2023-09-24 00:00:00",
+        "time_end": "2023-09-25 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "elsa",
+      "display_name": "Elsa",
+      "region_name": "Florida",
+      "station": {
+        "id": "72210",
+        "latitude": 27.7,
+        "longitude": -82.4
+      },
+      "era5": {
+        "data_dir": "data/era5_elsa",
+        "area": [
+          28.25,
+          -82.75,
+          27.25,
+          -81.75
+        ],
+        "start_date": "2021-07-05",
+        "end_date": "2021-07-09"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72210_Elsa",
+        "start_time": "2021-07-05 00:00:00",
+        "end_time": "2021-07-09 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2021-07-05 00:00:00",
+        "pre_end": "2021-07-07 00:00:00",
+        "impact_end": "2021-07-08 12:00:00",
+        "time_end": "2021-07-09 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "fred",
+      "display_name": "Fred",
+      "region_name": "Florida Panhandle",
+      "station": {
+        "id": "72214",
+        "latitude": 30.39,
+        "longitude": -84.35
+      },
+      "era5": {
+        "data_dir": "data/era5_fred",
+        "area": [
+          31.0,
+          -84.75,
+          30.0,
+          -83.75
+        ],
+        "start_date": "2021-08-14",
+        "end_date": "2021-08-19"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72214_Fred",
+        "start_time": "2021-08-14 00:00:00",
+        "end_time": "2021-08-19 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2021-08-14 00:00:00",
+        "pre_end": "2021-08-16 00:00:00",
+        "impact_end": "2021-08-17 12:00:00",
+        "time_end": "2021-08-19 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "nicholas",
+      "display_name": "Nicholas",
+      "region_name": "Texas Coast",
+      "station": {
+        "id": "72251",
+        "latitude": 27.77,
+        "longitude": -97.5
+      },
+      "era5": {
+        "data_dir": "data/era5_nicholas",
+        "area": [
+          28.25,
+          -98.0,
+          27.25,
+          -97.0
+        ],
+        "start_date": "2021-09-12",
+        "end_date": "2021-09-17"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72251_Nicholas",
+        "start_time": "2021-09-12 00:00:00",
+        "end_time": "2021-09-17 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2021-09-12 00:00:00",
+        "pre_end": "2021-09-14 00:00:00",
+        "impact_end": "2021-09-15 12:00:00",
+        "time_end": "2021-09-17 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "sally",
+      "display_name": "Sally",
+      "region_name": "Northern Gulf Coast",
+      "station": {
+        "id": "72233",
+        "latitude": 30.34,
+        "longitude": -89.82
+      },
+      "era5": {
+        "data_dir": "data/era5_sally",
+        "area": [
+          30.84,
+          -90.32,
+          29.84,
+          -89.32
+        ],
+        "start_date": "2020-09-13",
+        "end_date": "2020-09-18"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72233_Sally",
+        "start_time": "2020-09-13 00:00:00",
+        "end_time": "2020-09-18 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2020-09-13 00:00:00",
+        "pre_end": "2020-09-15 00:00:00",
+        "impact_end": "2020-09-17 00:00:00",
+        "time_end": "2020-09-18 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "zeta",
+      "display_name": "Zeta",
+      "region_name": "Louisiana",
+      "station": {
+        "id": "72233",
+        "latitude": 30.34,
+        "longitude": -89.82
+      },
+      "era5": {
+        "data_dir": "data/era5_zeta",
+        "area": [
+          30.84,
+          -90.32,
+          29.84,
+          -89.32
+        ],
+        "start_date": "2020-10-26",
+        "end_date": "2020-10-30"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72233_Zeta",
+        "start_time": "2020-10-26 00:00:00",
+        "end_time": "2020-10-30 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2020-10-26 00:00:00",
+        "pre_end": "2020-10-28 00:00:00",
+        "impact_end": "2020-10-29 12:00:00",
+        "time_end": "2020-10-30 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "cristobal",
+      "display_name": "Cristobal",
+      "region_name": "Louisiana",
+      "station": {
+        "id": "72233",
+        "latitude": 30.34,
+        "longitude": -89.82
+      },
+      "era5": {
+        "data_dir": "data/era5_cristobal",
+        "area": [
+          30.84,
+          -90.32,
+          29.84,
+          -89.32
+        ],
+        "start_date": "2020-06-05",
+        "end_date": "2020-06-10"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72233_Cristobal",
+        "start_time": "2020-06-05 00:00:00",
+        "end_time": "2020-06-10 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2020-06-05 00:00:00",
+        "pre_end": "2020-06-07 00:00:00",
+        "impact_end": "2020-06-08 12:00:00",
+        "time_end": "2020-06-10 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "eta",
+      "display_name": "Eta",
+      "region_name": "Florida",
+      "station": {
+        "id": "72210",
+        "latitude": 27.7,
+        "longitude": -82.4
+      },
+      "era5": {
+        "data_dir": "data/era5_eta",
+        "area": [
+          28.25,
+          -82.75,
+          27.25,
+          -81.75
+        ],
+        "start_date": "2020-11-07",
+        "end_date": "2020-11-13"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72210_Eta",
+        "start_time": "2020-11-07 00:00:00",
+        "end_time": "2020-11-13 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2020-11-07 00:00:00",
+        "pre_end": "2020-11-10 00:00:00",
+        "impact_end": "2020-11-12 00:00:00",
+        "time_end": "2020-11-13 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "isaias",
+      "display_name": "Isaias",
+      "region_name": "North Carolina Coast",
+      "station": {
+        "id": "72305",
+        "latitude": 34.7761,
+        "longitude": -76.8767
+      },
+      "era5": {
+        "data_dir": "data/era5_isaias",
+        "area": [
+          35.25,
+          -77.5,
+          34.25,
+          -76.5
+        ],
+        "start_date": "2020-08-01",
+        "end_date": "2020-08-05"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72305_Isaias",
+        "start_time": "2020-08-01 00:00:00",
+        "end_time": "2020-08-05 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2020-08-01 00:00:00",
+        "pre_end": "2020-08-03 00:00:00",
+        "impact_end": "2020-08-04 12:00:00",
+        "time_end": "2020-08-05 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "barry",
+      "display_name": "Barry",
+      "region_name": "Louisiana",
+      "station": {
+        "id": "72233",
+        "latitude": 30.34,
+        "longitude": -89.82
+      },
+      "era5": {
+        "data_dir": "data/era5_barry",
+        "area": [
+          30.84,
+          -90.32,
+          29.84,
+          -89.32
+        ],
+        "start_date": "2019-07-11",
+        "end_date": "2019-07-16"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72233_Barry",
+        "start_time": "2019-07-11 00:00:00",
+        "end_time": "2019-07-16 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2019-07-11 00:00:00",
+        "pre_end": "2019-07-13 00:00:00",
+        "impact_end": "2019-07-14 12:00:00",
+        "time_end": "2019-07-16 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "nestor",
+      "display_name": "Nestor",
+      "region_name": "Florida Panhandle",
+      "station": {
+        "id": "72214",
+        "latitude": 30.39,
+        "longitude": -84.35
+      },
+      "era5": {
+        "data_dir": "data/era5_nestor",
+        "area": [
+          31.0,
+          -84.75,
+          30.0,
+          -83.75
+        ],
+        "start_date": "2019-10-17",
+        "end_date": "2019-10-21"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72214_Nestor",
+        "start_time": "2019-10-17 00:00:00",
+        "end_time": "2019-10-21 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2019-10-17 00:00:00",
+        "pre_end": "2019-10-19 00:00:00",
+        "impact_end": "2019-10-20 12:00:00",
+        "time_end": "2019-10-21 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "gordon",
+      "display_name": "Gordon",
+      "region_name": "Northern Gulf Coast",
+      "station": {
+        "id": "72233",
+        "latitude": 30.34,
+        "longitude": -89.82
+      },
+      "era5": {
+        "data_dir": "data/era5_gordon",
+        "area": [
+          30.84,
+          -90.32,
+          29.84,
+          -89.32
+        ],
+        "start_date": "2018-09-02",
+        "end_date": "2018-09-06"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72233_Gordon",
+        "start_time": "2018-09-02 00:00:00",
+        "end_time": "2018-09-06 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2018-09-02 00:00:00",
+        "pre_end": "2018-09-04 00:00:00",
+        "impact_end": "2018-09-05 12:00:00",
+        "time_end": "2018-09-06 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "alberto_2018",
+      "display_name": "Alberto (2018)",
+      "region_name": "Florida Panhandle",
+      "station": {
+        "id": "72214",
+        "latitude": 30.39,
+        "longitude": -84.35
+      },
+      "era5": {
+        "data_dir": "data/era5_alberto_2018",
+        "area": [
+          31.0,
+          -84.75,
+          30.0,
+          -83.75
+        ],
+        "start_date": "2018-05-26",
+        "end_date": "2018-05-31"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72214_Alberto_2018",
+        "start_time": "2018-05-26 00:00:00",
+        "end_time": "2018-05-31 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2018-05-26 00:00:00",
+        "pre_end": "2018-05-28 00:00:00",
+        "impact_end": "2018-05-29 12:00:00",
+        "time_end": "2018-05-31 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "nate",
+      "display_name": "Nate",
+      "region_name": "Louisiana and Mississippi",
+      "station": {
+        "id": "72233",
+        "latitude": 30.34,
+        "longitude": -89.82
+      },
+      "era5": {
+        "data_dir": "data/era5_nate",
+        "area": [
+          30.84,
+          -90.32,
+          29.84,
+          -89.32
+        ],
+        "start_date": "2017-10-06",
+        "end_date": "2017-10-10"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72233_Nate",
+        "start_time": "2017-10-06 00:00:00",
+        "end_time": "2017-10-10 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2017-10-06 00:00:00",
+        "pre_end": "2017-10-08 00:00:00",
+        "impact_end": "2017-10-09 12:00:00",
+        "time_end": "2017-10-10 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "cindy",
+      "display_name": "Cindy",
+      "region_name": "Louisiana and Texas Coast",
+      "station": {
+        "id": "72240",
+        "latitude": 30.12,
+        "longitude": -93.22
+      },
+      "era5": {
+        "data_dir": "data/era5_cindy",
+        "area": [
+          30.62,
+          -93.72,
+          29.62,
+          -92.72
+        ],
+        "start_date": "2017-06-20",
+        "end_date": "2017-06-24"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72240_Cindy",
+        "start_time": "2017-06-20 00:00:00",
+        "end_time": "2017-06-24 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2017-06-20 00:00:00",
+        "pre_end": "2017-06-22 00:00:00",
+        "impact_end": "2017-06-23 12:00:00",
+        "time_end": "2017-06-24 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "hermine",
+      "display_name": "Hermine",
+      "region_name": "Florida Big Bend",
+      "station": {
+        "id": "72214",
+        "latitude": 30.39,
+        "longitude": -84.35
+      },
+      "era5": {
+        "data_dir": "data/era5_hermine",
+        "area": [
+          31.0,
+          -84.75,
+          30.0,
+          -83.75
+        ],
+        "start_date": "2016-08-30",
+        "end_date": "2016-09-04"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72214_Hermine",
+        "start_time": "2016-08-30 00:00:00",
+        "end_time": "2016-09-04 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2016-08-30 00:00:00",
+        "pre_end": "2016-09-01 00:00:00",
+        "impact_end": "2016-09-03 00:00:00",
+        "time_end": "2016-09-04 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "talim",
+      "display_name": "Talim",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_talim",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2023-07-14",
+        "end_date": "2023-07-20"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Talim",
+        "start_time": "2023-07-14 00:00:00",
+        "end_time": "2023-07-20 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2023-07-14 00:00:00",
+        "pre_end": "2023-07-16 12:00:00",
+        "impact_end": "2023-07-18 00:00:00",
+        "time_end": "2023-07-20 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "koinu",
+      "display_name": "Koinu",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_koinu",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2023-10-05",
+        "end_date": "2023-10-10"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Koinu",
+        "start_time": "2023-10-05 00:00:00",
+        "end_time": "2023-10-10 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2023-10-05 00:00:00",
+        "pre_end": "2023-10-07 12:00:00",
+        "impact_end": "2023-10-09 12:00:00",
+        "time_end": "2023-10-10 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "doksuri",
+      "display_name": "Doksuri",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_doksuri",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2023-07-25",
+        "end_date": "2023-07-30"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Doksuri",
+        "start_time": "2023-07-25 00:00:00",
+        "end_time": "2023-07-30 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2023-07-25 00:00:00",
+        "pre_end": "2023-07-27 00:00:00",
+        "impact_end": "2023-07-29 00:00:00",
+        "time_end": "2023-07-30 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "haikui",
+      "display_name": "Haikui",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_haikui",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2023-09-03",
+        "end_date": "2023-09-09"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Haikui",
+        "start_time": "2023-09-03 00:00:00",
+        "end_time": "2023-09-09 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2023-09-03 00:00:00",
+        "pre_end": "2023-09-05 00:00:00",
+        "impact_end": "2023-09-08 00:00:00",
+        "time_end": "2023-09-09 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "chaba",
+      "display_name": "Chaba",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_chaba",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2022-06-29",
+        "end_date": "2022-07-04"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Chaba",
+        "start_time": "2022-06-29 00:00:00",
+        "end_time": "2022-07-04 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2022-06-29 00:00:00",
+        "pre_end": "2022-07-01 00:00:00",
+        "impact_end": "2022-07-03 00:00:00",
+        "time_end": "2022-07-04 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "mulan",
+      "display_name": "Mulan",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_mulan",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2022-08-08",
+        "end_date": "2022-08-12"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Mulan",
+        "start_time": "2022-08-08 00:00:00",
+        "end_time": "2022-08-12 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2022-08-08 00:00:00",
+        "pre_end": "2022-08-10 00:00:00",
+        "impact_end": "2022-08-11 12:00:00",
+        "time_end": "2022-08-12 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "nalgae",
+      "display_name": "Nalgae",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_nalgae",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2022-10-30",
+        "end_date": "2022-11-04"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Nalgae",
+        "start_time": "2022-10-30 00:00:00",
+        "end_time": "2022-11-04 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2022-10-30 00:00:00",
+        "pre_end": "2022-11-01 00:00:00",
+        "impact_end": "2022-11-03 00:00:00",
+        "time_end": "2022-11-04 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "lionrock",
+      "display_name": "Lionrock",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_lionrock",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2021-10-07",
+        "end_date": "2021-10-11"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Lionrock",
+        "start_time": "2021-10-07 00:00:00",
+        "end_time": "2021-10-11 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2021-10-07 00:00:00",
+        "pre_end": "2021-10-08 12:00:00",
+        "impact_end": "2021-10-10 00:00:00",
+        "time_end": "2021-10-11 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "kompasu",
+      "display_name": "Kompasu",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_kompasu",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2021-10-10",
+        "end_date": "2021-10-15"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Kompasu",
+        "start_time": "2021-10-10 00:00:00",
+        "end_time": "2021-10-15 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2021-10-10 00:00:00",
+        "pre_end": "2021-10-12 00:00:00",
+        "impact_end": "2021-10-14 00:00:00",
+        "time_end": "2021-10-15 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "koguma",
+      "display_name": "Koguma",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_koguma",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2021-06-10",
+        "end_date": "2021-06-14"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Koguma",
+        "start_time": "2021-06-10 00:00:00",
+        "end_time": "2021-06-14 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2021-06-10 00:00:00",
+        "pre_end": "2021-06-12 00:00:00",
+        "impact_end": "2021-06-13 12:00:00",
+        "time_end": "2021-06-14 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "cempaka",
+      "display_name": "Cempaka",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_cempaka",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2021-07-19",
+        "end_date": "2021-07-24"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Cempaka",
+        "start_time": "2021-07-19 00:00:00",
+        "end_time": "2021-07-24 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2021-07-19 00:00:00",
+        "pre_end": "2021-07-21 00:00:00",
+        "impact_end": "2021-07-22 12:00:00",
+        "time_end": "2021-07-24 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "lupit",
+      "display_name": "Lupit",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_lupit",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2021-08-03",
+        "end_date": "2021-08-08"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Lupit",
+        "start_time": "2021-08-03 00:00:00",
+        "end_time": "2021-08-08 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2021-08-03 00:00:00",
+        "pre_end": "2021-08-05 00:00:00",
+        "impact_end": "2021-08-06 12:00:00",
+        "time_end": "2021-08-08 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "higos",
+      "display_name": "Higos",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_higos",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2020-08-17",
+        "end_date": "2020-08-20"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Higos",
+        "start_time": "2020-08-17 00:00:00",
+        "end_time": "2020-08-20 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2020-08-17 00:00:00",
+        "pre_end": "2020-08-18 12:00:00",
+        "impact_end": "2020-08-19 12:00:00",
+        "time_end": "2020-08-20 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "nangka",
+      "display_name": "Nangka",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_nangka",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2020-10-11",
+        "end_date": "2020-10-15"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Nangka",
+        "start_time": "2020-10-11 00:00:00",
+        "end_time": "2020-10-15 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2020-10-11 00:00:00",
+        "pre_end": "2020-10-13 00:00:00",
+        "impact_end": "2020-10-14 12:00:00",
+        "time_end": "2020-10-15 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "nuri",
+      "display_name": "Nuri",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_nuri",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2020-06-12",
+        "end_date": "2020-06-15"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Nuri",
+        "start_time": "2020-06-12 00:00:00",
+        "end_time": "2020-06-15 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2020-06-12 00:00:00",
+        "pre_end": "2020-06-13 00:00:00",
+        "impact_end": "2020-06-14 12:00:00",
+        "time_end": "2020-06-15 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "saudel",
+      "display_name": "Saudel",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_saudel",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2020-10-21",
+        "end_date": "2020-10-26"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Saudel",
+        "start_time": "2020-10-21 00:00:00",
+        "end_time": "2020-10-26 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2020-10-21 00:00:00",
+        "pre_end": "2020-10-23 00:00:00",
+        "impact_end": "2020-10-24 12:00:00",
+        "time_end": "2020-10-26 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "sinlaku",
+      "display_name": "Sinlaku",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_sinlaku",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2020-07-30",
+        "end_date": "2020-08-03"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Sinlaku",
+        "start_time": "2020-07-30 00:00:00",
+        "end_time": "2020-08-03 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2020-07-30 00:00:00",
+        "pre_end": "2020-08-01 00:00:00",
+        "impact_end": "2020-08-02 12:00:00",
+        "time_end": "2020-08-03 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "mangkhut",
+      "display_name": "Mangkhut",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_mangkhut",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2018-09-14",
+        "end_date": "2018-09-18"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Mangkhut",
+        "start_time": "2018-09-14 00:00:00",
+        "end_time": "2018-09-18 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2018-09-14 00:00:00",
+        "pre_end": "2018-09-16 00:00:00",
+        "impact_end": "2018-09-17 12:00:00",
+        "time_end": "2018-09-18 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "barijat",
+      "display_name": "Barijat",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_barijat",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2018-09-09",
+        "end_date": "2018-09-14"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Barijat",
+        "start_time": "2018-09-09 00:00:00",
+        "end_time": "2018-09-14 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2018-09-09 00:00:00",
+        "pre_end": "2018-09-11 12:00:00",
+        "impact_end": "2018-09-13 00:00:00",
+        "time_end": "2018-09-14 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "bebinca",
+      "display_name": "Bebinca",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_bebinca",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2018-08-12",
+        "end_date": "2018-08-17"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Bebinca",
+        "start_time": "2018-08-12 00:00:00",
+        "end_time": "2018-08-17 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2018-08-12 00:00:00",
+        "pre_end": "2018-08-14 00:00:00",
+        "impact_end": "2018-08-16 00:00:00",
+        "time_end": "2018-08-17 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "ewiniar",
+      "display_name": "Ewiniar",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_ewiniar",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2018-06-04",
+        "end_date": "2018-06-09"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Ewiniar",
+        "start_time": "2018-06-04 00:00:00",
+        "end_time": "2018-06-09 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2018-06-04 00:00:00",
+        "pre_end": "2018-06-06 00:00:00",
+        "impact_end": "2018-06-08 00:00:00",
+        "time_end": "2018-06-09 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "hato",
+      "display_name": "Hato",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_hato",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2017-08-21",
+        "end_date": "2017-08-25"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Hato",
+        "start_time": "2017-08-21 00:00:00",
+        "end_time": "2017-08-25 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2017-08-21 00:00:00",
+        "pre_end": "2017-08-23 00:00:00",
+        "impact_end": "2017-08-24 12:00:00",
+        "time_end": "2017-08-25 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "pakhar",
+      "display_name": "Pakhar",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_pakhar",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2017-08-25",
+        "end_date": "2017-08-29"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Pakhar",
+        "start_time": "2017-08-25 00:00:00",
+        "end_time": "2017-08-29 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2017-08-25 00:00:00",
+        "pre_end": "2017-08-27 00:00:00",
+        "impact_end": "2017-08-28 12:00:00",
+        "time_end": "2017-08-29 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "merbok",
+      "display_name": "Merbok",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_merbok",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2017-06-10",
+        "end_date": "2017-06-14"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Merbok",
+        "start_time": "2017-06-10 00:00:00",
+        "end_time": "2017-06-14 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2017-06-10 00:00:00",
+        "pre_end": "2017-06-12 00:00:00",
+        "impact_end": "2017-06-13 12:00:00",
+        "time_end": "2017-06-14 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "roke",
+      "display_name": "Roke",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_roke",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2017-07-20",
+        "end_date": "2017-07-24"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Roke",
+        "start_time": "2017-07-20 00:00:00",
+        "end_time": "2017-07-24 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2017-07-20 00:00:00",
+        "pre_end": "2017-07-22 00:00:00",
+        "impact_end": "2017-07-23 12:00:00",
+        "time_end": "2017-07-24 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "nida",
+      "display_name": "Nida",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_nida",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2016-07-31",
+        "end_date": "2016-08-04"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Nida",
+        "start_time": "2016-07-31 00:00:00",
+        "end_time": "2016-08-04 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2016-07-31 00:00:00",
+        "pre_end": "2016-08-02 00:00:00",
+        "impact_end": "2016-08-03 12:00:00",
+        "time_end": "2016-08-04 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "haima",
+      "display_name": "Haima",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_haima",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2016-10-19",
+        "end_date": "2016-10-23"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Haima",
+        "start_time": "2016-10-19 00:00:00",
+        "end_time": "2016-10-23 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2016-10-19 00:00:00",
+        "pre_end": "2016-10-21 00:00:00",
+        "impact_end": "2016-10-22 12:00:00",
+        "time_end": "2016-10-23 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "sarika",
+      "display_name": "Sarika",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_sarika",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2016-10-16",
+        "end_date": "2016-10-20"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Sarika",
+        "start_time": "2016-10-16 00:00:00",
+        "end_time": "2016-10-20 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2016-10-16 00:00:00",
+        "pre_end": "2016-10-18 00:00:00",
+        "impact_end": "2016-10-19 12:00:00",
+        "time_end": "2016-10-20 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "megi",
+      "display_name": "Megi",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_megi",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2016-09-26",
+        "end_date": "2016-09-30"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Megi",
+        "start_time": "2016-09-26 00:00:00",
+        "end_time": "2016-09-30 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2016-09-26 00:00:00",
+        "pre_end": "2016-09-28 00:00:00",
+        "impact_end": "2016-09-29 12:00:00",
+        "time_end": "2016-09-30 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "meranti",
+      "display_name": "Meranti",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_meranti",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2016-09-12",
+        "end_date": "2016-09-16"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Meranti",
+        "start_time": "2016-09-12 00:00:00",
+        "end_time": "2016-09-16 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2016-09-12 00:00:00",
+        "pre_end": "2016-09-14 00:00:00",
+        "impact_end": "2016-09-15 12:00:00",
+        "time_end": "2016-09-16 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "bolaven",
+      "display_name": "Bolaven",
+      "region_name": "Mariana Islands",
+      "station": {
+        "id": "91212",
+        "latitude": 13.48,
+        "longitude": 144.8
+      },
+      "era5": {
+        "data_dir": "data/era5_bolaven",
+        "area": [
+          13.98,
+          144.3,
+          12.98,
+          145.3
+        ],
+        "start_date": "2023-10-08",
+        "end_date": "2023-10-13"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/91212_Bolaven",
+        "start_time": "2023-10-08 00:00:00",
+        "end_time": "2023-10-13 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2023-10-08 00:00:00",
+        "pre_end": "2023-10-10 00:00:00",
+        "impact_end": "2023-10-12 00:00:00",
+        "time_end": "2023-10-13 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "wutip",
+      "display_name": "Wutip",
+      "region_name": "Guam and Mariana Islands",
+      "station": {
+        "id": "91212",
+        "latitude": 13.48,
+        "longitude": 144.8
+      },
+      "era5": {
+        "data_dir": "data/era5_wutip",
+        "area": [
+          13.98,
+          144.3,
+          12.98,
+          145.3
+        ],
+        "start_date": "2019-02-21",
+        "end_date": "2019-02-27"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/91212_Wutip",
+        "start_time": "2019-02-21 00:00:00",
+        "end_time": "2019-02-27 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2019-02-21 00:00:00",
+        "pre_end": "2019-02-23 00:00:00",
+        "impact_end": "2019-02-25 12:00:00",
+        "time_end": "2019-02-27 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "yutu",
+      "display_name": "Yutu",
+      "region_name": "Mariana Islands",
+      "station": {
+        "id": "91212",
+        "latitude": 13.48,
+        "longitude": 144.8
+      },
+      "era5": {
+        "data_dir": "data/era5_yutu",
+        "area": [
+          13.98,
+          144.3,
+          12.98,
+          145.3
+        ],
+        "start_date": "2018-10-23",
+        "end_date": "2018-10-28"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/91212_Yutu",
+        "start_time": "2018-10-23 00:00:00",
+        "end_time": "2018-10-28 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2018-10-23 00:00:00",
+        "pre_end": "2018-10-25 00:00:00",
+        "impact_end": "2018-10-26 12:00:00",
+        "time_end": "2018-10-28 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "wutip_2025",
+      "display_name": "Wutip (2025)",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_wutip_2025",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2025-06-10",
+        "end_date": "2025-06-16"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Wutip_2025",
+        "start_time": "2025-06-10 00:00:00",
+        "end_time": "2025-06-16 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2025-06-10 00:00:00",
+        "pre_end": "2025-06-13 00:00:00",
+        "impact_end": "2025-06-15 00:00:00",
+        "time_end": "2025-06-16 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "td_june_2025",
+      "display_name": "Tropical Depression (June 2025)",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_td_june_2025",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2025-06-25",
+        "end_date": "2025-06-28"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Tropical_Depression_June_2025",
+        "start_time": "2025-06-25 00:00:00",
+        "end_time": "2025-06-28 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2025-06-25 00:00:00",
+        "pre_end": "2025-06-26 00:00:00",
+        "impact_end": "2025-06-27 00:00:00",
+        "time_end": "2025-06-28 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "chantal_2025",
+      "display_name": "Chantal (2025)",
+      "region_name": "North Carolina Coast",
+      "station": {
+        "id": "72305",
+        "latitude": 34.7761,
+        "longitude": -76.8767
+      },
+      "era5": {
+        "data_dir": "data/era5_chantal_2025",
+        "area": [
+          35.25,
+          -77.5,
+          34.25,
+          -76.5
+        ],
+        "start_date": "2025-07-03",
+        "end_date": "2025-07-08"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72305_Chantal_2025",
+        "start_time": "2025-07-03 00:00:00",
+        "end_time": "2025-07-08 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2025-07-03 00:00:00",
+        "pre_end": "2025-07-05 00:00:00",
+        "impact_end": "2025-07-07 00:00:00",
+        "time_end": "2025-07-08 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "danas_2025",
+      "display_name": "Danas (2025)",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_danas_2025",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2025-07-04",
+        "end_date": "2025-07-10"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Danas_2025",
+        "start_time": "2025-07-04 00:00:00",
+        "end_time": "2025-07-10 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2025-07-04 00:00:00",
+        "pre_end": "2025-07-06 00:00:00",
+        "impact_end": "2025-07-09 00:00:00",
+        "time_end": "2025-07-10 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "wipha_2025",
+      "display_name": "Wipha (2025)",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_wipha_2025",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2025-07-16",
+        "end_date": "2025-07-24"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Wipha_2025",
+        "start_time": "2025-07-16 00:00:00",
+        "end_time": "2025-07-24 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2025-07-16 00:00:00",
+        "pre_end": "2025-07-19 00:00:00",
+        "impact_end": "2025-07-21 00:00:00",
+        "time_end": "2025-07-24 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "podul_2025",
+      "display_name": "Podul (2025)",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_podul_2025",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2025-08-07",
+        "end_date": "2025-08-16"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Podul_2025",
+        "start_time": "2025-08-07 00:00:00",
+        "end_time": "2025-08-16 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2025-08-07 00:00:00",
+        "pre_end": "2025-08-12 00:00:00",
+        "impact_end": "2025-08-15 00:00:00",
+        "time_end": "2025-08-16 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "td_august_2025",
+      "display_name": "Tropical Depression (August 2025)",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_td_august_2025",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2025-08-16",
+        "end_date": "2025-08-20"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Tropical_Depression_August_2025",
+        "start_time": "2025-08-16 00:00:00",
+        "end_time": "2025-08-20 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2025-08-16 00:00:00",
+        "pre_end": "2025-08-18 00:00:00",
+        "impact_end": "2025-08-19 00:00:00",
+        "time_end": "2025-08-20 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "kajiki_2025",
+      "display_name": "Kajiki (2025)",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_kajiki_2025",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2025-08-22",
+        "end_date": "2025-08-28"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Kajiki_2025",
+        "start_time": "2025-08-22 00:00:00",
+        "end_time": "2025-08-28 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2025-08-22 00:00:00",
+        "pre_end": "2025-08-24 00:00:00",
+        "impact_end": "2025-08-26 00:00:00",
+        "time_end": "2025-08-28 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "nongfa_2025",
+      "display_name": "Nongfa (2025)",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_nongfa_2025",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2025-08-28",
+        "end_date": "2025-09-01"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Nongfa_2025",
+        "start_time": "2025-08-28 00:00:00",
+        "end_time": "2025-09-01 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2025-08-28 00:00:00",
+        "pre_end": "2025-08-29 00:00:00",
+        "impact_end": "2025-08-31 00:00:00",
+        "time_end": "2025-09-01 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "tapah_2025",
+      "display_name": "Tapah (2025)",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_tapah_2025",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2025-09-05",
+        "end_date": "2025-09-10"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Tapah_2025",
+        "start_time": "2025-09-05 00:00:00",
+        "end_time": "2025-09-10 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2025-09-05 00:00:00",
+        "pre_end": "2025-09-07 00:00:00",
+        "impact_end": "2025-09-09 00:00:00",
+        "time_end": "2025-09-10 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "mitag_2025",
+      "display_name": "Mitag (2025)",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_mitag_2025",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2025-09-16",
+        "end_date": "2025-09-21"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Mitag_2025",
+        "start_time": "2025-09-16 00:00:00",
+        "end_time": "2025-09-21 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2025-09-16 00:00:00",
+        "pre_end": "2025-09-18 00:00:00",
+        "impact_end": "2025-09-20 00:00:00",
+        "time_end": "2025-09-21 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "ragasa_2025",
+      "display_name": "Ragasa (2025)",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_ragasa_2025",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2025-09-18",
+        "end_date": "2025-09-26"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Ragasa_2025",
+        "start_time": "2025-09-18 00:00:00",
+        "end_time": "2025-09-26 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2025-09-18 00:00:00",
+        "pre_end": "2025-09-23 00:00:00",
+        "impact_end": "2025-09-25 00:00:00",
+        "time_end": "2025-09-26 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "matmo_2025",
+      "display_name": "Matmo (2025)",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_matmo_2025",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2025-10-01",
+        "end_date": "2025-10-08"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Matmo_2025",
+        "start_time": "2025-10-01 00:00:00",
+        "end_time": "2025-10-08 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2025-10-01 00:00:00",
+        "pre_end": "2025-10-04 00:00:00",
+        "impact_end": "2025-10-06 00:00:00",
+        "time_end": "2025-10-08 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "fengshen_2025",
+      "display_name": "Fengshen (2025)",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_fengshen_2025",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2025-10-17",
+        "end_date": "2025-10-24"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Fengshen_2025",
+        "start_time": "2025-10-17 00:00:00",
+        "end_time": "2025-10-24 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2025-10-17 00:00:00",
+        "pre_end": "2025-10-20 00:00:00",
+        "impact_end": "2025-10-22 00:00:00",
+        "time_end": "2025-10-24 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "fung_wong_2025",
+      "display_name": "Fung-wong (2025)",
+      "region_name": "Hong Kong",
+      "station": {
+        "id": "45004",
+        "latitude": 22.31,
+        "longitude": 114.17
+      },
+      "era5": {
+        "data_dir": "data/era5_fung_wong_2025",
+        "area": [
+          22.81,
+          113.67,
+          21.81,
+          114.67
+        ],
+        "start_date": "2025-11-04",
+        "end_date": "2025-11-14"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/45004_Fung-wong_2025",
+        "start_time": "2025-11-04 00:00:00",
+        "end_time": "2025-11-14 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2025-11-04 00:00:00",
+        "pre_end": "2025-11-09 00:00:00",
+        "impact_end": "2025-11-12 00:00:00",
+        "time_end": "2025-11-14 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "nokaen_2026",
+      "display_name": "Nokaen (2026)",
+      "region_name": "Central Philippines",
+      "station": {
+        "id": "98646",
+        "latitude": 10.32,
+        "longitude": 123.98
+      },
+      "era5": {
+        "data_dir": "data/era5_nokaen_2026",
+        "area": [
+          10.82,
+          123.48,
+          9.82,
+          124.48
+        ],
+        "start_date": "2026-01-13",
+        "end_date": "2026-01-23"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/98646_Nokaen_2026",
+        "start_time": "2026-01-13 00:00:00",
+        "end_time": "2026-01-23 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2026-01-13 00:00:00",
+        "pre_end": "2026-01-16 00:00:00",
+        "impact_end": "2026-01-19 00:00:00",
+        "time_end": "2026-01-23 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "penha_2026",
+      "display_name": "Penha (2026)",
+      "region_name": "Central Philippines",
+      "station": {
+        "id": "98646",
+        "latitude": 10.32,
+        "longitude": 123.98
+      },
+      "era5": {
+        "data_dir": "data/era5_penha_2026",
+        "area": [
+          10.82,
+          123.48,
+          9.82,
+          124.48
+        ],
+        "start_date": "2026-02-03",
+        "end_date": "2026-02-08"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/98646_Penha_2026",
+        "start_time": "2026-02-03 00:00:00",
+        "end_time": "2026-02-08 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2026-02-03 00:00:00",
+        "pre_end": "2026-02-04 00:00:00",
+        "impact_end": "2026-02-06 00:00:00",
+        "time_end": "2026-02-08 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "arthur_2026",
+      "display_name": "Arthur (2026)",
+      "region_name": "Texas and Louisiana Coast",
+      "station": {
+        "id": "72240",
+        "latitude": 30.1253,
+        "longitude": -93.2161
+      },
+      "era5": {
+        "data_dir": "data/era5_arthur_2026",
+        "area": [
+          30.75,
+          -93.75,
+          29.75,
+          -92.75
+        ],
+        "start_date": "2026-06-16",
+        "end_date": "2026-06-19"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/72240_Arthur_2026",
+        "start_time": "2026-06-16 00:00:00",
+        "end_time": "2026-06-19 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2026-06-16 00:00:00",
+        "pre_end": "2026-06-17 00:00:00",
+        "impact_end": "2026-06-18 00:00:00",
+        "time_end": "2026-06-19 00:00:00"
+      },
+      "enabled": true
+    },
+    {
+      "id": "bavi_2026",
+      "display_name": "Bavi (2026)",
+      "region_name": "Guam and Mariana Islands",
+      "station": {
+        "id": "91212",
+        "latitude": 13.48,
+        "longitude": 144.8
+      },
+      "era5": {
+        "data_dir": "data/era5_bavi_2026",
+        "area": [
+          13.98,
+          144.3,
+          12.98,
+          145.3
+        ],
+        "start_date": "2026-07-05",
+        "end_date": "2026-07-14"
+      },
+      "sounding": {
+        "data_dir": "data/radiosonde/91212_Bavi_2026",
+        "start_time": "2026-07-05 00:00:00",
+        "end_time": "2026-07-14 00:00:00",
+        "hours": [
+          0,
+          12
+        ]
+      },
+      "plot": {
+        "time_start": "2026-07-05 00:00:00",
+        "pre_end": "2026-07-06 00:00:00",
+        "impact_end": "2026-07-08 00:00:00",
+        "time_end": "2026-07-14 00:00:00"
       },
       "enabled": true
     }
