@@ -114,6 +114,7 @@ def build_jobs(config: dict[str, Any], workflow_id: str) -> dict[str, dict[str, 
                     "start_date": window["era5_start_date"],
                     "end_date": window["era5_end_date"],
                     "max_parallel_downloads": int(workflow.get("max_parallel_downloads", 3)),
+                    "download_strategy": workflow.get("download_strategy", "auto"),
                 },
                 "sounding": {
                     "data_dir": workflow["sounding_data_dir_template"].format(**values),
@@ -174,6 +175,7 @@ def configure_era5_downloader(job: dict[str, Any], download: bool, extract: bool
     downloadera5.DOWNLOAD_ERA5 = download
     downloadera5.EXTRACT_TO_CSV = extract
     downloadera5.MAX_PARALLEL_DOWNLOADS = int(job["era5"].get("max_parallel_downloads", 3))
+    downloadera5.DOWNLOAD_STRATEGY = job["era5"].get("download_strategy", "auto")
     downloadera5.GRIB_DIR.mkdir(parents=True, exist_ok=True)
     downloadera5.OUT_CSV.parent.mkdir(parents=True, exist_ok=True)
 

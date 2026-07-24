@@ -147,6 +147,7 @@ def configure_era5_downloader(event: dict[str, Any], download: bool, extract: bo
     downloadera5.MAX_PARALLEL_DOWNLOADS = int(
         event["era5"].get("max_parallel_downloads", 3)
     )
+    downloadera5.DOWNLOAD_STRATEGY = event["era5"].get("download_strategy", "auto")
     downloadera5.GRIB_DIR.mkdir(parents=True, exist_ok=True)
     downloadera5.OUT_CSV.parent.mkdir(parents=True, exist_ok=True)
 
