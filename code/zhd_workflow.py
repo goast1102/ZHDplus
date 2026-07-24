@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import shutil
 from datetime import datetime
 from pathlib import Path
@@ -17,6 +18,8 @@ import plot_zhd_timeseries
 
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
+DATA_ROOT = Path(os.environ.get("ZHDPLUS_DATA_ROOT", ROOT_DIR / "data")).expanduser()
+OUT_ROOT = Path(os.environ.get("ZHDPLUS_OUT_ROOT", ROOT_DIR / "out")).expanduser()
 DEFAULT_CONFIG = Path(__file__).with_name("typhoon_events.json")
 
 RESULT_STEPS = [
@@ -60,6 +63,18 @@ def resolve_path(path_value: str | Path) -> Path:
     return ROOT_DIR / path
 
 
+def resolve_data_path(path_value: str | Path) -> Path:
+    path = Path(path_value)
+    if path.is_absolute():
+        return path
+
+    parts = path.parts
+    if parts and parts[0] == "data":
+        return DATA_ROOT.joinpath(*parts[1:])
+
+    return ROOT_DIR / path
+
+
 def load_events(config_path: Path) -> dict[str, dict[str, Any]]:
     with config_path.open("r", encoding="utf-8") as f:
         raw = json.load(f)
@@ -82,15 +97,15 @@ def load_events(config_path: Path) -> dict[str, dict[str, Any]]:
 
 
 def event_out_dir(event: dict[str, Any]) -> Path:
-    return ROOT_DIR / "out" / event["id"]
+    return OUT_ROOT / event["id"]
 
 
 def era5_data_dir(event: dict[str, Any]) -> Path:
-    return resolve_path(event["era5"]["data_dir"])
+    return resolve_data_path(event["era5"]["data_dir"])
 
 
 def sounding_data_dir(event: dict[str, Any]) -> Path:
-    return resolve_path(event["sounding"]["data_dir"])
+    return resolve_data_path(event["sounding"]["data_dir"])
 
 
 def expected_sounding_combined(event: dict[str, Any]) -> Path:

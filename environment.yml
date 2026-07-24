@@ -1,0 +1,17 @@
+name: zhdplus
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pandas
+  - numpy
+  - xarray
+  - cfgrib
+  - eccodes
+  - python-eccodes
+  - matplotlib
+  - scipy
+  - requests
+  - pip
+  - pip:
+      - "cdsapi>=0.7.7"
