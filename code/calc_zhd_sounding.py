@@ -22,6 +22,7 @@ OUT_PROFILE_CSV = Path(r"E:\ZHDplus\test\out\mawar_sounding_zhd_profile.csv")
 # ============================================================
 
 TIME_COL = "sounding_time_utc"
+OBS_TIME_COL = "time"
 LON_COL = "longitude"
 LAT_COL = "latitude"
 P_COL = "pressure_hPa"
@@ -31,6 +32,7 @@ RH_PERCENT_COL = "relative humidity_%"
 
 REQUIRED_COLS = [
     TIME_COL,
+    OBS_TIME_COL,
     LON_COL,
     LAT_COL,
     P_COL,
@@ -122,14 +124,10 @@ def log_mean(nh_lower: np.ndarray, nh_upper: np.ndarray) -> np.ndarray:
     return result
 
 
-def calculate_profile_zhd(profile: pd.DataFrame, time_utc: object) -> float | None:
-    """Calculate profile-integrated ZHD plus top Saastamoinen compensation."""
+def prepare_time_ordered_profile(profile: pd.DataFrame) -> pd.DataFrame:
+    """Return valid records sorted by actual radiosonde observation time."""
 
-    if len(profile) < 2:
-        print(f"Warning: {time_utc} has fewer than 2 valid layers; skip profile ZHD.")
-        return None
-
-    profile = profile.sort_values(H_COL).copy()
+    profile = profile.copy()
     profile["temperature_K"] = profile[TC_COL] + 273.15
     profile["RH"] = profile[RH_PERCENT_COL] / 100.0
 
@@ -144,8 +142,31 @@ def calculate_profile_zhd(profile: pd.DataFrame, time_utc: object) -> float | No
         / profile["temperature_K"]
     )
 
-    profile = profile.replace([np.inf, -np.inf], np.nan).dropna(subset=["Nh"])
+    profile = profile.replace([np.inf, -np.inf], np.nan).dropna(
+        subset=[
+            TIME_COL,
+            OBS_TIME_COL,
+            LON_COL,
+            LAT_COL,
+            P_COL,
+            H_COL,
+            TC_COL,
+            RH_PERCENT_COL,
+            "Nh",
+        ]
+    )
     profile = profile[profile["Nh"] > 0.0].copy()
+    return profile.sort_values(OBS_TIME_COL, kind="mergesort").reset_index(drop=True)
+
+
+def calculate_profile_zhd(profile: pd.DataFrame, time_utc: object) -> float | None:
+    """Calculate time-ordered trajectory ZHD plus endpoint compensation."""
+
+    if len(profile) < 2:
+        print(f"Warning: {time_utc} has fewer than 2 valid layers; skip profile ZHD.")
+        return None
+
+    profile = prepare_time_ordered_profile(profile)
 
     if len(profile) < 2:
         print(
@@ -154,42 +175,41 @@ def calculate_profile_zhd(profile: pd.DataFrame, time_utc: object) -> float | No
         )
         return None
 
-    bottom_layer = profile.loc[profile[P_COL].idxmax()]
-    lat_deg = float(bottom_layer[LAT_COL])
-
-    height = profile[H_COL].to_numpy(dtype=float)
-    height_geometric = geometric_height(height, lat_deg)
+    height_geometric = geometric_height(
+        profile[H_COL].to_numpy(dtype=float),
+        profile[LAT_COL].to_numpy(dtype=float),
+    )
     nh = profile["Nh"].to_numpy(dtype=float)
 
-    d_height = np.diff(height)
     dz_geometric = np.diff(height_geometric)
     nh_lower = nh[:-1]
     nh_upper = nh[1:]
 
-    valid_interval = d_height >= 0.0
-    if not np.all(valid_interval):
-        print(f"Warning: {time_utc} has negative height intervals after sorting.")
-
     zhd_int = 1e-6 * np.sum(
-        dz_geometric[valid_interval]
-        * log_mean(
-            nh_lower[valid_interval],
-            nh_upper[valid_interval],
-        )
+        dz_geometric * log_mean(nh_lower, nh_upper)
     )
 
-    top_layer = profile.loc[profile[H_COL].idxmax()]
-    p_top = float(top_layer[P_COL])
-    h_top_geopotential = float(top_layer[H_COL])
-    h_top_geometric = float(geometric_height(h_top_geopotential, lat_deg))
+    end_layer = profile.iloc[-1]
+    highest_layer = profile.loc[profile[H_COL].idxmax()]
+    p_top = float(end_layer[P_COL])
+    h_top_geopotential = float(end_layer[H_COL])
+    lat_top = float(end_layer[LAT_COL])
+    h_top_geometric = float(geometric_height(h_top_geopotential, lat_top))
 
     if p_top > 100.0:
         print(
-            f"Warning: {time_utc} top pressure is {p_top:.2f} hPa, "
-            "greater than 100 hPa; still calculating profile ZHD."
+            f"Warning: {time_utc} trajectory endpoint pressure is {p_top:.2f} hPa, "
+            "greater than 100 hPa; still calculating trajectory ZHD."
         )
 
-    zhd_top = saastamoinen_zhd(p_top, h_top_geometric, lat_deg)
+    if float(end_layer[H_COL]) < float(highest_layer[H_COL]):
+        print(
+            f"Warning: {time_utc} trajectory endpoint height "
+            f"{float(end_layer[H_COL]):.1f} m is below the highest observed layer "
+            f"{float(highest_layer[H_COL]):.1f} m."
+        )
+
+    zhd_top = saastamoinen_zhd(p_top, h_top_geometric, lat_top)
     return float(zhd_int + zhd_top)
 
 
@@ -202,6 +222,9 @@ def read_sounding_csv(input_csv: Path) -> pd.DataFrame:
     if missing_cols:
         raise ValueError(f"Input CSV is missing required columns: {missing_cols}")
 
+    df[TIME_COL] = pd.to_datetime(df[TIME_COL], errors="coerce")
+    df[OBS_TIME_COL] = pd.to_datetime(df[OBS_TIME_COL], errors="coerce")
+
     for col in [LON_COL, LAT_COL, P_COL, H_COL, TC_COL, RH_PERCENT_COL]:
         df[col] = pd.to_numeric(df[col], errors="coerce")
 
@@ -213,17 +236,17 @@ def calculate_zhd(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     profile_rows: list[dict[str, object]] = []
 
     for time_utc, group in df.groupby(TIME_COL, sort=True):
-        valid = group.dropna(subset=[P_COL, H_COL, TC_COL, RH_PERCENT_COL]).copy()
+        valid = prepare_time_ordered_profile(group)
 
         if valid.empty:
             print(f"Warning: {time_utc} has no valid layers; skip this sounding.")
             continue
 
-        bottom_layer = valid.loc[valid[P_COL].idxmax()]
-        longitude = float(bottom_layer[LON_COL])
-        latitude = float(bottom_layer[LAT_COL])
-        p0 = float(bottom_layer[P_COL])
-        h0_geopotential = float(bottom_layer[H_COL])
+        start_layer = valid.iloc[0]
+        longitude = float(start_layer[LON_COL])
+        latitude = float(start_layer[LAT_COL])
+        p0 = float(start_layer[P_COL])
+        h0_geopotential = float(start_layer[H_COL])
         h0_geometric = float(geometric_height(h0_geopotential, latitude))
 
         zhd_saas = saastamoinen_zhd(p0, h0_geometric, latitude)
