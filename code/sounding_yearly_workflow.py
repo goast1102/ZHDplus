@@ -25,9 +25,6 @@ OUT_ROOT = Path(os.environ.get("ZHDPLUS_OUT_ROOT", ROOT_DIR / "out")).expanduser
 WORKFLOW_ID = "sounding_yearly_2024_2026_20260728"
 
 SOUNDING_HOURS = [0, 12]
-MIN_SOUNDING_LEVELS = 80
-MIN_SOUNDING_TOP_HEIGHT_M = 20000.0
-MAX_SOUNDING_TOP_PRESSURE_HPA = 50.0
 
 SOUNDING_OUTPUTS = {
     "saas": "sounding_zhd_saas.csv",
@@ -221,11 +218,7 @@ def run_qc(station: Station, window: Window) -> bool:
         return False
 
     quality = load_quality(station, window)
-    quality["passes_qc"] = (
-        (quality["levels"] >= MIN_SOUNDING_LEVELS)
-        & (quality["maximum_height_m"] >= MIN_SOUNDING_TOP_HEIGHT_M)
-        & (quality["minimum_pressure_hPa"] <= MAX_SOUNDING_TOP_PRESSURE_HPA)
-    )
+    quality["profile_available"] = quality["levels"].fillna(0) > 0
 
     expected_times = generate_expected_times(window)
     actual_times = set(
@@ -238,22 +231,22 @@ def run_qc(station: Station, window: Window) -> bool:
     target_summary_csv.parent.mkdir(parents=True, exist_ok=True)
     quality.to_csv(target_summary_csv, index=False, encoding="utf-8-sig")
 
-    good_times = set(
-        quality.loc[quality["passes_qc"], "sounding_time_utc"]
+    available_times = set(
+        quality.loc[quality["profile_available"], "sounding_time_utc"]
         .dropna()
         .dt.strftime("%Y-%m-%d %H:%M:%S")
     )
     print(
-        f"QC {station.id} {window.id}: "
-        f"{len(good_times)}/{len(expected_times)} expected profiles pass; "
+        f"Sounding summary {station.id} {window.id}: "
+        f"{len(available_times)}/{len(expected_times)} expected profiles available; "
         f"{len(actual_times)} profiles downloaded/found."
     )
     print(f"Quality summary: {target_summary_csv}")
 
-    if not good_times:
+    if not available_times:
         if target_qc_csv.exists():
             target_qc_csv.unlink()
-        print("Skip ZHD for this station/year: no profiles passed QC.")
+        print("Skip ZHD for this station/year: no profiles are available.")
         return False
 
     combined = pd.read_csv(source_csv)
@@ -261,17 +254,14 @@ def run_qc(station: Station, window: Window) -> bool:
         combined["sounding_time_utc"],
         errors="coerce",
     )
-    filtered = combined[
-        combined["sounding_time_utc"].dt.strftime("%Y-%m-%d %H:%M:%S").isin(good_times)
-    ].copy()
-    filtered.to_csv(
+    combined.to_csv(
         target_qc_csv,
         index=False,
         encoding="utf-8-sig",
         date_format="%Y-%m-%d %H:%M:%S",
     )
-    print(f"QC combined CSV: {target_qc_csv}")
-    print(f"QC rows: {len(filtered)}")
+    print(f"Calculation input CSV: {target_qc_csv}")
+    print(f"Calculation input rows: {len(combined)}")
     return True
 
 
@@ -395,7 +385,7 @@ def run_plot(station: Station, window: Window) -> bool:
     axes[0].legend(loc="best", frameon=True)
 
     if quality is not None and "levels" in quality.columns:
-        colors = quality.get("passes_qc", pd.Series(False, index=quality.index)).map(
+        colors = quality.get("profile_available", pd.Series(False, index=quality.index)).map(
             {True: "#16a34a", False: "#94a3b8"}
         )
         axes[1].scatter(
@@ -406,14 +396,6 @@ def run_plot(station: Station, window: Window) -> bool:
             alpha=0.85,
             edgecolors="none",
         )
-        axes[1].axhline(
-            MIN_SOUNDING_LEVELS,
-            color="#475569",
-            lw=1.0,
-            ls="--",
-            label=f"QC threshold ({MIN_SOUNDING_LEVELS} levels)",
-        )
-        axes[1].legend(loc="best", frameon=True)
     axes[1].set_ylabel("Levels")
     axes[1].set_xlabel("Time (UTC)")
 
@@ -449,8 +431,8 @@ def summarize_job(station: Station, window: Window) -> dict[str, Any]:
         "end_time": window.end_time,
         "expected_profiles": expected_count,
         "downloaded_profiles": 0,
-        "qc_pass_profiles": 0,
-        "qc_pass_rate": 0.0,
+        "used_profiles": 0,
+        "used_rate": 0.0,
         "levels_mean": None,
         "levels_min": None,
         "levels_max": None,
@@ -472,14 +454,12 @@ def summarize_job(station: Station, window: Window) -> dict[str, Any]:
         return row
 
     downloaded = quality[quality["levels"].fillna(0) > 0].copy()
-    passed = quality[
-        quality.get("passes_qc", pd.Series(False, index=quality.index)).fillna(False)
+    used = quality[
+        quality.get("profile_available", pd.Series(False, index=quality.index)).fillna(False)
     ].copy()
     row["downloaded_profiles"] = int(len(downloaded))
-    row["qc_pass_profiles"] = int(len(passed))
-    row["qc_pass_rate"] = (
-        float(len(passed) / expected_count) if expected_count else 0.0
-    )
+    row["used_profiles"] = int(len(used))
+    row["used_rate"] = float(len(used) / expected_count) if expected_count else 0.0
 
     for prefix, column in [
         ("levels", "levels"),
@@ -527,7 +507,7 @@ def write_summary(rows: list[dict[str, Any]]) -> None:
             stations=("station_id", "count"),
             expected_profiles=("expected_profiles", "sum"),
             downloaded_profiles=("downloaded_profiles", "sum"),
-            qc_pass_profiles=("qc_pass_profiles", "sum"),
+            used_profiles=("used_profiles", "sum"),
             levels_mean=("levels_mean", "mean"),
             top_height_mean_m=("top_height_mean_m", "mean"),
             top_pressure_mean_hPa=("top_pressure_mean_hPa", "mean"),
@@ -537,9 +517,7 @@ def write_summary(rows: list[dict[str, Any]]) -> None:
     year_summary["download_rate"] = (
         year_summary["downloaded_profiles"] / year_summary["expected_profiles"]
     )
-    year_summary["qc_pass_rate"] = (
-        year_summary["qc_pass_profiles"] / year_summary["expected_profiles"]
-    )
+    year_summary["used_rate"] = year_summary["used_profiles"] / year_summary["expected_profiles"]
     year_summary.to_csv(
         summary_dir / "sounding_yearly_overall_summary.csv",
         index=False,
